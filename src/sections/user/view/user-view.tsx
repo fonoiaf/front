@@ -27,6 +27,10 @@ import type { UserProps } from '../user-table-row';
 // ----------------------------------------------------------------------
 
 export function UserView() {
+  const i18n = {
+    labelRowsPerPage: 'Linhas por Página'
+  }
+
   const table = useTable();
 
   const [filterName, setFilterName] = useState('');
@@ -122,6 +126,7 @@ export function UserView() {
           onPageChange={table.onChangePage}
           rowsPerPageOptions={[5, 10, 25]}
           onRowsPerPageChange={table.onChangeRowsPerPage}
+          labelRowsPerPage={i18n.labelRowsPerPage}
         />
       </Card>
     </DashboardContent>

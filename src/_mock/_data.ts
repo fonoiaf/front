@@ -102,7 +102,7 @@ export const _langs = [
   {
     value: 'pt',
     label: 'Português',
-    icon: '/assets/icons/flags/ic-flag-en.svg',
+    icon: '/assets/icons/flags/ic-flag-pt.svg',
   },
   {
     value: 'en',
