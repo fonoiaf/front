@@ -17,6 +17,7 @@ export const UserPage = lazy(() => import('src/pages/user'));
 export const FigurePage = lazy(() => import('src/pages/figure'));
 export const PhonemePage = lazy(() => import('src/pages/phoneme'));
 export const PatientPage = lazy(() => import('src/pages/patient'));
+export const DashboardPage = lazy(() => import('src/pages/dashboard'));
 export const TranscriptionPage = lazy(() => import('src/pages/transcription'));
 export const SignInPage = lazy(() => import('src/pages/sign-in'));
 export const ProductsPage = lazy(() => import('src/pages/products'));
@@ -39,6 +40,7 @@ const renderFallback = (
 
 export function Router() {
   return useRoutes([
+    { element: <HomePage />, index: true },
     {
       element: (
         <DashboardLayout>
@@ -47,8 +49,9 @@ export function Router() {
           </Suspense>
         </DashboardLayout>
       ),
+      path: 'dashboard',
       children: [
-        { element: <HomePage />, index: true },
+        { element: <DashboardPage />, index: true },
         { path: 'blog', element: <BlogPage /> },
         { path: 'user', element: <UserPage /> },
         { path: 'word', element: <WordPage /> },

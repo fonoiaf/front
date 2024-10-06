@@ -28,8 +28,8 @@ import type { UserProps } from '../user-table-row';
 
 export function UserView() {
   const i18n = {
-    labelRowsPerPage: 'Linhas por Página'
-  }
+    labelRowsPerPage: 'Linhas por Página',
+  };
 
   const table = useTable();
 

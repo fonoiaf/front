@@ -10,42 +10,42 @@ const icon = (name: string) => (
 export const navData = [
   {
     title: 'Dashboard',
-    path: '/',
+    path: '/dashboard',
     icon: icon('ic-analytics'),
   },
   {
     title: 'Fonemas',
-    path: '/phoneme',
+    path: '/dashboard/phoneme',
     icon: icon('ic-phoneme'),
   },
   {
     title: 'Palavras',
-    path: '/word',
+    path: '/dashboard/word',
     icon: icon('ic-word'),
   },
   {
     title: 'Figuras',
-    path: '/figure',
+    path: '/dashboard/figure',
     icon: icon('ic-figure'),
   },
   {
     title: 'Pacientes',
-    path: '/patient',
+    path: '/dashboard/patient',
     icon: icon('ic-patient'),
   },
   {
     title: 'Transcrições',
-    path: '/transcription',
+    path: '/dashboard/transcription',
     icon: icon('ic-transcription'),
   },
   {
     title: 'Usuários',
-    path: '/user',
+    path: '/dashboard/user',
     icon: icon('ic-user'),
   },
   {
     title: 'Product',
-    path: '/products',
+    path: '/dashboard/products',
     icon: icon('ic-cart'),
     info: (
       <Label color="error" variant="inverted">
@@ -55,7 +55,7 @@ export const navData = [
   },
   {
     title: 'Blog',
-    path: '/blog',
+    path: '/dashboard/blog',
     icon: icon('ic-blog'),
   },
   // {
