@@ -15,27 +15,27 @@ export const navData = [
   },
   {
     title: 'Fonemas',
-    path: '/user',
+    path: '/phoneme',
     icon: icon('ic-phoneme'),
   },
   {
     title: 'Palavras',
-    path: '/user',
+    path: '/word',
     icon: icon('ic-word'),
   },
   {
     title: 'Figuras',
-    path: '/user',
+    path: '/figure',
     icon: icon('ic-figure'),
   },
   {
     title: 'Pacientes',
-    path: '/user',
+    path: '/patient',
     icon: icon('ic-patient'),
   },
   {
     title: 'Transcrições',
-    path: '/user',
+    path: '/transcription',
     icon: icon('ic-transcription'),
   },
   {
