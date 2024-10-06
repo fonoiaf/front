@@ -56,15 +56,15 @@ export const Logo = forwardRef<HTMLDivElement, LogoProps>(
     *
     */
 
-    const singleLogo2 = (
-      <Box
-        alt="Single logo"
-        component="img"
-        src="/assets/logo/ic-paperclip.svg"
-        width="100%"
-        height="100%"
-      />
-    );
+    // const singleLogo2 = (
+    //   <Box
+    //     alt="Single logo"
+    //     component="img"
+    //     src="/assets/logo/ic-paperclip.svg"
+    //     width="100%"
+    //     height="100%"
+    //   />
+    // );
 
     const singleLogo = (
       <svg

@@ -1,4 +1,4 @@
-import type { PaletteMode } from '@mui/material/styles';
+// import type { PaletteMode } from '@mui/material/styles';
 import type { IconButtonProps } from '@mui/material/IconButton';
 
 import * as React from 'react';
@@ -6,6 +6,8 @@ import * as React from 'react';
 import IconButton from '@mui/material/IconButton';
 import WbSunnyRoundedIcon from '@mui/icons-material/WbSunnyRounded';
 import ModeNightRoundedIcon from '@mui/icons-material/ModeNightRounded';
+
+export type PaletteMode = 'light' | 'dark';
 
 interface ToggleColorModeProps extends IconButtonProps {
   mode: PaletteMode;

@@ -1,4 +1,4 @@
-import type { PaletteMode } from '@mui/material/styles';
+// import type { PaletteMode } from '@mui/material/styles';
 import type { SelectChangeEvent } from '@mui/material/Select';
 
 import * as React from 'react';
@@ -16,6 +16,8 @@ import { styled, createTheme, ThemeProvider } from '@mui/material/styles';
 
 import getMPTheme from './theme/getMPTheme';
 import ToggleColorMode from './components/ToggleColorMode';
+
+export type PaletteMode = 'light' | 'dark';
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
   position: 'relative',
