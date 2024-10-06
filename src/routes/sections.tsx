@@ -40,7 +40,7 @@ const renderFallback = (
 
 export function Router() {
   return useRoutes([
-    { element: <HomePage />, index: true },
+    { element: <HomePage />, path: '/' },
     {
       element: (
         <DashboardLayout>
