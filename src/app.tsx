@@ -5,7 +5,7 @@ import { I18nextProvider } from 'react-i18next';
 
 import Fab from '@mui/material/Fab';
 
-import { Router } from 'src/routes/sections';
+import { Router } from 'src/router';
 
 import { useScrollToTop } from 'src/hooks/use-scroll-to-top';
 import { ThemeProvider } from 'src/theme/theme-provider';
