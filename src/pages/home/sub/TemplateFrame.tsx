@@ -2,6 +2,7 @@
 import type { SelectChangeEvent } from '@mui/material/Select';
 
 import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -35,20 +36,22 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
 }));
 
 interface TemplateFrameProps {
-  showCustomTheme: boolean;
-  toggleCustomTheme: (theme: boolean) => void;
   mode: PaletteMode;
-  toggleColorMode: () => void;
+  showCustomTheme: boolean;
   children: React.ReactNode;
+  toggleColorMode: () => void;
+  toggleCustomTheme: (theme: boolean) => void;
 }
 
 export default function TemplateFrame({
-  showCustomTheme,
-  toggleCustomTheme,
   mode,
-  toggleColorMode,
   children,
+  showCustomTheme,
+  toggleColorMode,
+  toggleCustomTheme,
 }: TemplateFrameProps) {
+  const { t } = useTranslation('home');
+
   const handleChange = (event: SelectChangeEvent) => {
     toggleCustomTheme(event.target.value === 'custom');
   };
@@ -69,15 +72,16 @@ export default function TemplateFrame({
             }}
           >
             <Button
-              variant="text"
+              hidden
               size="small"
+              component="a"
+              variant="text"
               aria-label="Back to templates"
               startIcon={<ArrowBackRoundedIcon />}
-              component="a"
               href="/material-ui/getting-started/templates/"
               sx={{ display: { xs: 'none', sm: 'flex' } }}
             >
-              Back to templates
+              {t('appbar.back')}
             </Button>
             <IconButton
               size="small"
@@ -98,8 +102,8 @@ export default function TemplateFrame({
                   onChange={handleChange}
                   label="Design Language"
                 >
-                  <MenuItem value="custom">Custom Theme</MenuItem>
-                  <MenuItem value="material">Material Design 2</MenuItem>
+                  <MenuItem value="custom">{t('appbar.custom-theme')}</MenuItem>
+                  <MenuItem value="material">{t('appbar.material-theme')}</MenuItem>
                 </Select>
               </FormControl>
               <ToggleColorMode

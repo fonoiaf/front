@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 
 import { CONFIG } from 'src/config-global';
 
-import MarketingPage from 'src/sections/home/MarketingPage';
+import MarketingPage from './sub/MarketingPage';
 
 // ----------------------------------------------------------------------
 

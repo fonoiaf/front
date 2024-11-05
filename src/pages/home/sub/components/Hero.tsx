@@ -116,7 +116,7 @@ export default function Hero() {
               variant="outlined"
               aria-label="Enter your email address"
               placeholder="Your email address"
-              autoComplete='off'
+              autoComplete="off"
               fullWidth
               // slotProps={{
               //   htmlInput: {

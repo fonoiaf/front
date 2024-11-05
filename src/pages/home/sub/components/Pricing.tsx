@@ -90,7 +90,7 @@ export default function Pricing() {
       >
         {tiers.map((tier) => (
           // <Grid size={{ xs: 12, sm: tier.title === 'Enterprise' ? 12 : 6, md: 4 }} key={tier.title}>
-          <Grid xs={12} sm={ tier.title === 'Enterprise' ? 12 : 6} md={4} key={tier.title}>
+          <Grid xs={12} sm={tier.title === 'Enterprise' ? 12 : 6} md={4} key={tier.title}>
             <Card
               sx={[
                 {
