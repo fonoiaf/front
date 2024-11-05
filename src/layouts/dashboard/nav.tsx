@@ -8,8 +8,8 @@ import { useTheme } from '@mui/material/styles';
 import ListItemButton from '@mui/material/ListItemButton';
 import Drawer, { drawerClasses } from '@mui/material/Drawer';
 
-import { usePathname } from 'src/routes/hooks';
-import { RouterLink } from 'src/routes/components';
+import { usePathname } from 'src/hooks/use-pathname';
+import { RouterLink } from 'src/components/router-link';
 
 import { varAlpha } from 'src/theme/styles';
 
