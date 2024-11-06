@@ -5,19 +5,19 @@ import { I18nextProvider } from 'react-i18next';
 
 import Fab from '@mui/material/Fab';
 
-import { Router } from 'src/router';
-
 import { useScrollToTop } from 'src/hooks/use-scroll-to-top';
-import { ThemeProvider } from 'src/theme/theme-provider';
-import { Iconify } from 'src/components/iconify';
 
+import { Router } from 'src/router';
 // TRANSLATIONS ---------------------------------------------------
 import home_en from 'src/translations/en/home.json';
 import home_pt from 'src/translations/pt/home.json';
 import common_en from 'src/translations/en/common.json';
 import common_pt from 'src/translations/pt/common.json';
+import { ThemeProvider } from 'src/theme/theme-provider';
 import introduction_en from 'src/translations/en/introduction.json';
 import introduction_pt from 'src/translations/pt/introduction.json';
+
+import { Iconify } from 'src/components/iconify';
 // ---------------------------------------------------
 
 export default function App() {

@@ -2,10 +2,10 @@ import * as React from 'react';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-// import Grid from '@mui/material/Grid2';
-import Grid from '@mui/material/Grid';
+// import Grid from '@mui/material/Grid';
 import { useTheme } from '@mui/system';
 import Avatar from '@mui/material/Avatar';
+import Grid from '@mui/material/Unstable_Grid2';
 import Container from '@mui/material/Container';
 import CardHeader from '@mui/material/CardHeader';
 import Typography from '@mui/material/Typography';

@@ -1,5 +1,6 @@
 import type { BoxProps } from '@mui/material/Box';
 import type { CardProps } from '@mui/material/Card';
+import type { PostItemProps } from 'src/pages/blog/components/post-item';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -12,7 +13,6 @@ import { fToNow } from 'src/utils/format-time';
 
 import { Iconify } from 'src/components/iconify';
 import { Scrollbar } from 'src/components/scrollbar';
-import { PostItemProps } from 'src/pages/blog/components/post-item';
 
 
 // ----------------------------------------------------------------------

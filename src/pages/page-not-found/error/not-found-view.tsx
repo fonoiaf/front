@@ -3,9 +3,9 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 
-import { RouterLink } from 'src/components/router-link';
-
 import { SimpleLayout } from 'src/layouts/simple';
+
+import { RouterLink } from 'src/components/router-link';
 
 // ----------------------------------------------------------------------
 

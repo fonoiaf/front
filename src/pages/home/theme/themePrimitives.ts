@@ -1,9 +1,7 @@
-// import type { Shadows, PaletteMode } from '@mui/material/styles';
+import type { PaletteMode } from 'src/models';
 import type { Shadows } from '@mui/material/styles';
 
 import { alpha, createTheme } from '@mui/material/styles';
-
-export type PaletteMode = 'light' | 'dark';
 
 declare module '@mui/material/Paper' {
   interface PaperPropsVariantOverrides {
