@@ -8,6 +8,7 @@ declare module '@mui/material/Paper' {
     highlighted: true;
   }
 }
+
 declare module '@mui/material/styles/createPalette' {
   interface ColorRange {
     50: string;
@@ -26,7 +27,6 @@ declare module '@mui/material/styles/createPalette' {
 }
 
 const defaultTheme = createTheme();
-
 const customShadows: Shadows = [...defaultTheme.shadows];
 
 export const brand = {

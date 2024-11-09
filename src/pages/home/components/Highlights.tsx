@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -14,46 +15,43 @@ import ConstructionRoundedIcon from '@mui/icons-material/ConstructionRounded';
 import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
 import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRounded';
 
-const items = [
-  {
-    icon: <SettingsSuggestRoundedIcon />,
-    title: 'Adaptable performance',
-    description:
-      'Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.',
-  },
-  {
-    icon: <ConstructionRoundedIcon />,
-    title: 'Built to last',
-    description:
-      'Experience unmatched durability that goes above and beyond with lasting investment.',
-  },
-  {
-    icon: <ThumbUpAltRoundedIcon />,
-    title: 'Great user experience',
-    description:
-      'Integrate our product into your routine with an intuitive and easy-to-use interface.',
-  },
-  {
-    icon: <AutoFixHighRoundedIcon />,
-    title: 'Innovative functionality',
-    description:
-      'Stay ahead with features that set new standards, addressing your evolving needs better than the rest.',
-  },
-  {
-    icon: <SupportAgentRoundedIcon />,
-    title: 'Reliable support',
-    description:
-      'Count on our responsive customer support, offering assistance that goes beyond the purchase.',
-  },
-  {
-    icon: <QueryStatsRoundedIcon />,
-    title: 'Precision in every detail',
-    description:
-      'Enjoy a meticulously crafted product where small touches make a significant impact on your overall experience.',
-  },
-];
 
 export default function Highlights() {
+  const { t } = useTranslation('home');
+
+  const items = [
+    {
+      icon: <SettingsSuggestRoundedIcon />,
+      title: t('highlights.items.performance.title'),
+      description: t('highlights.items.performance.description'),
+    },
+    {
+      icon: <ConstructionRoundedIcon />,
+      title: t('highlights.items.made.title'),
+      description: t('highlights.items.made.description'),
+    },
+    {
+      icon: <ThumbUpAltRoundedIcon />,
+      title: t('highlights.items.experience.title'),
+      description: t('highlights.items.experience.description'),
+    },
+    {
+      icon: <AutoFixHighRoundedIcon />,
+      title: t('highlights.items.innovative.title'),
+      description: t('highlights.items.innovative.description'),
+    },
+    {
+      icon: <SupportAgentRoundedIcon />,
+      title: t('highlights.items.support.title'),
+      description: t('highlights.items.support.description'),
+    },
+    {
+      icon: <QueryStatsRoundedIcon />,
+      title: t('highlights.items.precision.title'),
+      description: t('highlights.items.precision.description'),
+    },
+  ];
+
   return (
     <Box
       id="highlights"
@@ -80,11 +78,10 @@ export default function Highlights() {
           }}
         >
           <Typography component="h2" variant="h4" gutterBottom>
-            Highlights
+            {t('highlights.title')}
           </Typography>
           <Typography variant="body1" sx={{ color: 'grey.400' }}>
-            Explore why our product stands out: adaptability, durability, user-friendly design, and
-            innovation. Enjoy reliable customer support and precision in every detail.
+          {t('highlights.description')}
           </Typography>
         </Box>
         <Grid container spacing={2}>

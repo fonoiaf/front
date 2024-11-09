@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -14,47 +15,49 @@ import CardContent from '@mui/material/CardContent';
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 
-const tiers = [
-  {
-    title: 'Free',
-    price: '0',
-    description: ['10 users included', '2 GB of storage', 'Help center access', 'Email support'],
-    buttonText: 'Sign up for free',
-    buttonVariant: 'outlined',
-    buttonColor: 'primary',
-  },
-  {
-    title: 'Professional',
-    subheader: 'Recommended',
-    price: '15',
-    description: [
-      '20 users included',
-      '10 GB of storage',
-      'Help center access',
-      'Priority email support',
-      'Dedicated team',
-      'Best deals',
-    ],
-    buttonText: 'Start now',
-    buttonVariant: 'contained',
-    buttonColor: 'secondary',
-  },
-  {
-    title: 'Enterprise',
-    price: '30',
-    description: [
-      '50 users included',
-      '30 GB of storage',
-      'Help center access',
-      'Phone & email support',
-    ],
-    buttonText: 'Contact us',
-    buttonVariant: 'outlined',
-    buttonColor: 'primary',
-  },
-];
-
 export default function Pricing() {
+  const { t } = useTranslation('home');
+
+  const tiers = [
+    {
+      title: 'Free',
+      price: '0',
+      description: ['10 users included', '2 GB of storage', 'Help center access', 'Email support'],
+      buttonText: 'Sign up for free',
+      buttonVariant: 'outlined',
+      buttonColor: 'primary',
+    },
+    {
+      title: 'Professional',
+      subheader: 'Recommended',
+      price: '15',
+      description: [
+        '20 users included',
+        '10 GB of storage',
+        'Help center access',
+        'Priority email support',
+        'Dedicated team',
+        'Best deals',
+      ],
+      buttonText: 'Start now',
+      buttonVariant: 'contained',
+      buttonColor: 'secondary',
+    },
+    {
+      title: 'Enterprise',
+      price: '30',
+      description: [
+        '50 users included',
+        '30 GB of storage',
+        'Help center access',
+        'Phone & email support',
+      ],
+      buttonText: 'Contact us',
+      buttonVariant: 'outlined',
+      buttonColor: 'primary',
+    },
+  ];
+
   return (
     <Container
       id="pricing"
@@ -75,12 +78,12 @@ export default function Pricing() {
         }}
       >
         <Typography component="h2" variant="h4" gutterBottom sx={{ color: 'text.primary' }}>
-          Pricing
+          {t('pricing.title')}
         </Typography>
         <Typography variant="body1" sx={{ color: 'text.secondary' }}>
-          Quickly build an effective pricing table for your potential customers with this layout.{' '}
+          {t('pricing.subtitle')}
           <br />
-          It&apos;s built with default Material UI components with little customization.
+          {t('pricing.description')}
         </Typography>
       </Box>
       <Grid

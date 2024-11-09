@@ -40,31 +40,38 @@ export default function AppAppBar() {
 
   return (
     <AppBar
+      id="appbar"
       position="fixed"
-      sx={{ boxShadow: 0, bgcolor: 'transparent', backgroundImage: 'none', mt: 10 }}
+      sx={{
+        boxShadow: 0,
+        bgcolor: 'transparent',
+        backgroundImage: 'none',
+        mt: 10,
+        marginTop: '20px',
+      }}
     >
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
             <Sitemark />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <Button variant="text" color="info" size="small">
-                Features
+              <Button variant="text" color="info" size="small" href="#features">
+                {t('appbar.features')}
               </Button>
-              <Button variant="text" color="info" size="small">
-                Testimonials
+              <Button variant="text" color="info" size="small" href="#testimonials">
+                {t('appbar.testimonials')}
               </Button>
-              <Button variant="text" color="info" size="small">
-                Highlights
+              <Button variant="text" color="info" size="small" href="#highlights">
+                {t('appbar.hightlights')}
               </Button>
-              <Button variant="text" color="info" size="small">
-                Pricing
+              <Button variant="text" color="info" size="small" href="#pricing">
+                {t('appbar.pricing')}
               </Button>
-              <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
-                FAQ
+              <Button variant="text" color="info" size="small" href="#faq" sx={{ minWidth: 0 }}>
+                {t('appbar.faq')}
               </Button>
-              <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
-                Blog
+              <Button variant="text" color="info" size="small" href="#blog" sx={{ minWidth: 0 }}>
+                {t('appbar.blog')}
               </Button>
             </Box>
           </Box>
@@ -76,10 +83,10 @@ export default function AppAppBar() {
             }}
           >
             <Button color="primary" variant="text" size="small" href="/sign-in">
-              Sign in
+              {t('appbar.signIn')}
             </Button>
             <Button color="primary" variant="contained" size="small" href="/sign-in">
-              Sign up
+              {t('appbar.signUp')}
             </Button>
           </Box>
           <Box sx={{ display: { sm: 'flex', md: 'none' } }}>
@@ -100,20 +107,20 @@ export default function AppAppBar() {
                   </IconButton>
                 </Box>
                 <Divider sx={{ my: 3 }} />
-                <MenuItem>Features</MenuItem>
-                <MenuItem>Testimonials</MenuItem>
-                <MenuItem>Highlights</MenuItem>
-                <MenuItem>Pricing</MenuItem>
-                <MenuItem>FAQ</MenuItem>
-                <MenuItem>Blog</MenuItem>
+                <MenuItem>{t('appbar.features')}</MenuItem>
+                <MenuItem>{t('appbar.testimonials')}</MenuItem>
+                <MenuItem>{t('appbar.hightlights')}</MenuItem>
+                <MenuItem>{t('appbar.pricing')}</MenuItem>
+                <MenuItem>{t('appbar.faq')}</MenuItem>
+                <MenuItem>{t('appbar.blog')}</MenuItem>
                 <MenuItem>
-                  <Button color="primary" variant="contained" fullWidth>
-                    Sign up
+                  <Button color="primary" variant="contained" fullWidth href="/sign-in">
+                    {t('appbar.signIn')}
                   </Button>
                 </MenuItem>
                 <MenuItem>
-                  <Button color="primary" variant="outlined" fullWidth>
-                    Sign in
+                  <Button color="primary" variant="outlined" fullWidth href="/sign-in">
+                    {t('appbar.signUp')}
                   </Button>
                 </MenuItem>
               </Box>

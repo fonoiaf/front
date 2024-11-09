@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -31,13 +32,14 @@ const logoStyle = {
 };
 
 export default function LogoCollection() {
+  const { t } = useTranslation('home');
   const theme = useTheme();
   const logos = theme.palette.mode === 'light' ? darkLogos : whiteLogos;
 
   return (
     <Box id="logoCollection" sx={{ py: 4 }}>
       <Typography component="p" variant="subtitle2" align="center" sx={{ color: 'text.secondary' }}>
-        Trusted by the best companies
+        {t('trusted.by')}
       </Typography>
       <Grid container sx={{ justifyContent: 'center', mt: 0.5, opacity: 0.6 }}>
         {logos.map((logo, index) => (

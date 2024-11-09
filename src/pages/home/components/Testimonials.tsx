@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -80,6 +81,7 @@ const logoStyle = {
 };
 
 export default function Testimonials() {
+  const { t } = useTranslation('home');
   const theme = useTheme();
   const logos = theme.palette.mode === 'light' ? darkLogos : whiteLogos;
 
@@ -103,11 +105,10 @@ export default function Testimonials() {
         }}
       >
         <Typography component="h2" variant="h4" gutterBottom sx={{ color: 'text.primary' }}>
-          Testimonials
+          {t('testimonials.title')}
         </Typography>
         <Typography variant="body1" sx={{ color: 'text.secondary' }}>
-          See what our customers love about our products. Discover how we excel in efficiency,
-          durability, and satisfaction. Join us for quality, innovation, and reliable support.
+          {t('testimonials.description')}
         </Typography>
       </Box>
       <Grid container spacing={2}>

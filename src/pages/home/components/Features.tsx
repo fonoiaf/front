@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -129,6 +130,7 @@ export function MobileLayout({
 }
 
 export default function Features() {
+  const { t } = useTranslation('home');
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
 
   const handleItemClick = (index: number) => {
@@ -141,11 +143,10 @@ export default function Features() {
     <Container id="features" sx={{ py: { xs: 8, sm: 16 } }}>
       <Box sx={{ width: { sm: '100%', md: '60%' } }}>
         <Typography component="h2" variant="h4" gutterBottom sx={{ color: 'text.primary' }}>
-          Product features
+          {t('features.products')}
         </Typography>
         <Typography variant="body1" sx={{ color: 'text.secondary', mb: { xs: 2, sm: 4 } }}>
-          Provide a brief overview of the key features of the product. For example, you could list
-          the number of features, their types or benefits, and add-ons.
+          {t('features.description')}
         </Typography>
       </Box>
       <Box

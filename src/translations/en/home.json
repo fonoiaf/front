@@ -1,8 +1,84 @@
 {
-    "helmet": "Home Page | Fono IAF Web",
+    "helmet": "Home Page | Fono IAF",
     "appbar": {
-        "back": "Back to templates",
-        "custom-theme": "Custom Theme",
-        "material-theme": "Material Design 2"
-    }
+        "features": "Features",
+        "testimonials": "Testimonials",
+        "hightlights": "Hightlights",
+        "pricing": "Pricing",
+        "faq": "FAQ",
+        "blog": "Blog",
+        "signIn": "Sign in",
+        "signUp": "Sign up"
+    },
+    "hero": {
+        "our": "Our latest",
+        "products": "products",
+        "description": "Explore our cutting-edge dashboard, delivering high-quality solutions tailored to your needs. Elevate your experience with top-tier features and services.",
+        "email": "E-mail",
+        "start": "Start now",
+        "enter": "Enter your email address",
+        "emailPlaceholder": "Your email address",
+        "terms": {
+            "click": "By clicking",
+            "start": "Start now",
+            "agree": "you agree to our",
+            "conditions": "Terms & Conditions",
+            "dot": "."
+        }
+    },
+    "trusted": {
+        "by": "Trusted by the best companies"
+    },
+    "features": {
+        "products": "Product features",
+        "description": "Provide a brief overview of the key features of the product. For example, you could list the number of features, their types or benefits, and add-ons.",
+        "items": {
+            "dashboard": "Dashboard",
+            "mobile": "Mobile integration",
+            "all": "Available on all platforms",
+            "dashboardText": "This item could provide a snapshot of the most important metrics or data points related to the product.",
+            "mobileText": "This item could provide information about the mobile app version of the product.",
+            "allText": "This item could let users know the product is available on all platforms, such as web, mobile, and desktop."
+        }
+    },
+    "testimonials": {
+        "title": "Testimonials",
+        "description": "See what our customers love about our products. Discover how we excel in efficiency, durability, and satisfaction. Join us for quality, innovation, and reliable support."
+    },
+    "highlights": {
+        "title": "Highlights",
+        "description": "Explore why our product stands out: adaptability, durability, user-friendly design, and innovation. Enjoy reliable customer support and precision in every detail.",
+        "items": {
+            "performance": {
+                "title": "Adaptable performance",
+                "description": "Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks."
+            },
+            "made": {
+                "title": "Built to last",
+                "description": "Experience unmatched durability that goes above and beyond with lasting investment."
+            },
+            "experience": {
+                "title": "Great user experience",
+                "description": "Integrate our product into your routine with an intuitive and easy-to-use interface."
+            },
+            "innovative": {
+                "title": "Innovative functionality",
+                "description": "Stay ahead with features that set new standards, addressing your evolving needs better than the rest."
+            },
+            "support": {
+                "title": "Reliable support",
+                "description": "Count on our responsive customer support, offering assistance that goes beyond the purchase."
+            },
+            "precision": {
+                "title": "Precision in every detail",
+                "description": "Enjoy a meticulously crafted product where small touches make a significant impact on your overall experience."
+            }
+        }
+    },
+    "pricing": {
+        "title": "Pricing",
+        "subtitle": "Quickly build an effective pricing table for your potential customers with this layout.",
+        "description": "It's built with default Material UI components with little customization."
+    },
+    "title":"Our latest products"
 }

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
@@ -16,6 +17,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import SitemarkIcon from './SitemarkIcon';
 
 function Copyright() {
+  const { t } = useTranslation('home');
+
   return (
     <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
       {'Copyright © '}

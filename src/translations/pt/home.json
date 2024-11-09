@@ -1,8 +1,84 @@
 {
-    "helmet": "Página Inicial | Teia do TEA",
+    "helmet": "Página Inicial | Fono IAF",
     "appbar": {
-        "back": "Back to templates",
-        "custom-theme": "Custom Theme",
-        "material-theme": "Material Design 2"
-    }
+        "features": "Funcionalidades",
+        "testimonials": "Depoimentos",
+        "hightlights": "Destaques",
+        "pricing": "Preços",
+        "faq": "FAQ",
+        "blog": "Blog",
+        "signIn": "Entrar",
+        "signUp": "Cadastrar"
+    },
+    "hero": {
+        "our": "Nossos últimos",
+        "products": "podutos",
+        "description": "Explore nosso painel de última geração, entregando soluções de alta qualidade sob medida para suas necessidades. Eleve sua experiência com recursos e serviços de primeira linha.",
+        "email": "E-mail",
+        "start": "Comece Agora",
+        "enter": "Insira seu endereço de e-mail",
+        "emailPlaceholder": "Seu endereço de email",
+        "terms": {
+            "click": "Ao cliclar em",
+            "start": "Comece Agora",
+            "agree": "Voce concorda com os nossos",
+            "conditions": "Termos & Condicoes",
+            "dot": "."
+        }
+    },
+    "trusted": {
+        "by": "Confiável pelas melhores empresas"
+    },
+    "features": {
+        "products": "Características do produto",
+        "description": "Forneça uma breve visão geral dos principais recursos do produto. Por exemplo, você pode listar o número de recursos, seus tipos ou benefícios e complementos.",
+        "items": {
+            "dashboard": "Painel",
+            "mobile": "Integração móvel",
+            "all": "Disponível em todas as plataformas",
+            "dashboardText": "Este item pode fornecer um instantâneo das métricas ou pontos de dados mais importantes relacionados ao produto.",
+            "mobileText": "Este item pode fornecer informações sobre a versão do aplicativo móvel do produto.",
+            "allText": "Este item pode informar aos usuários que o produto está disponível em todas as plataformas, como web, dispositivos móveis e desktop."
+        }
+    },
+    "testimonials": {
+        "title": "Depoimentos",
+        "description": "Veja o que nossos clientes amam em nossos produtos. Descubra como nos destacamos em eficiência, durabilidade e satisfação. Junte-se a nós para qualidade, inovação e suporte confiável."
+    },
+    "highlights": {
+        "title": "Destaques",
+        "description": "Descubra por que nosso produto se destaca: adaptabilidade, durabilidade, design amigável e inovação. Aproveite o suporte confiável ao cliente e a precisão em cada detalhe.",
+        "items": {
+            "performance": {
+                "title": "Desempenho adaptável",
+                "description": "Nosso produto se ajusta facilmente às suas necessidades, aumentando a eficiência e simplificando suas tarefas."
+            },
+            "made": {
+                "title": "Feito para durar",
+                "description": "Experimente uma durabilidade incomparável que vai além do investimento duradouro."
+            },
+            "experience": {
+                "title": "Ótima experiência do usuário",
+                "description": "Integre nosso produto à sua rotina com uma interface intuitiva e fácil de usar."
+            },
+            "innovative": {
+                "title": "Funcionalidade inovadora",
+                "description": "Fique à frente com recursos que definem novos padrões, atendendo às suas necessidades em evolução melhor do que os demais."
+            },
+            "support": {
+                "title": "Suporte confiável",
+                "description": "Conte com nosso ágil suporte ao cliente, oferecendo assistência que vai além da compra."
+            },
+            "precision": {
+                "title": "Precisão em cada detalhe",
+                "description": "Desfrute de um produto meticulosamente elaborado, onde pequenos detalhes causam um impacto significativo na sua experiência geral."
+            }
+        }
+    },
+    "pricing": {
+        "title": "Preços",
+        "subtitle": "Crie rapidamente uma tabela de preços eficaz para seus clientes em potencial com este layout.",
+        "description": "Ele foi criado com componentes padrão do Material UI com pouca personalização."
+    },
+    "title":"Nossos ultimos produtos"
 }
