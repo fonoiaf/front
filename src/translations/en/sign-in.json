@@ -1,0 +1,13 @@
+{
+  "helmet": "Sign In",
+  "title": "Sign In",
+  "forgot": "Forgot password?",
+  "next": "Sign in",
+  "account": "Don’t have an account?",
+  "guide": "Get started",
+  "other": "OR",
+  "fields": {
+    "email": "Email address",
+    "password": "Password"
+  }
+}

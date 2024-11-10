@@ -1,4 +1,5 @@
 import { useState, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
@@ -16,6 +17,7 @@ import { Iconify } from 'src/components/iconify';
 // ----------------------------------------------------------------------
 
 export function SignInView() {
+  const { t } = useTranslation('signIn');
   const router = useRouter();
 
   const [showPassword, setShowPassword] = useState(false);
@@ -29,20 +31,20 @@ export function SignInView() {
       <TextField
         fullWidth
         name="email"
-        label="Email address"
+        label={t('fields.email') || 'Email address'}
         defaultValue="hello@gmail.com"
         InputLabelProps={{ shrink: true }}
         sx={{ mb: 3 }}
       />
 
       <Link variant="body2" color="inherit" sx={{ mb: 1.5 }}>
-        Forgot password?
+        {t('forgot')}
       </Link>
 
       <TextField
         fullWidth
         name="password"
-        label="Password"
+        label={t('fields.password') || 'Password'}
         defaultValue="@demo1234"
         InputLabelProps={{ shrink: true }}
         type={showPassword ? 'text' : 'password'}
@@ -66,7 +68,7 @@ export function SignInView() {
         variant="contained"
         onClick={handleSignIn}
       >
-        Sign in
+        {t('next')}
       </LoadingButton>
     </Box>
   );
@@ -74,11 +76,11 @@ export function SignInView() {
   return (
     <>
       <Box gap={1.5} display="flex" flexDirection="column" alignItems="center" sx={{ mb: 5 }}>
-        <Typography variant="h5">Sign in</Typography>
+        <Typography variant="h5">{t('title')}</Typography>
         <Typography variant="body2" color="text.secondary">
-          Don’t have an account?
+          {t('account')}
           <Link variant="subtitle2" sx={{ ml: 0.5 }}>
-            Get started
+            {t('guide')}
           </Link>
         </Typography>
       </Box>
@@ -90,7 +92,7 @@ export function SignInView() {
           variant="overline"
           sx={{ color: 'text.secondary', fontWeight: 'fontWeightMedium' }}
         >
-          OR
+          {t('other')}
         </Typography>
       </Divider>
 

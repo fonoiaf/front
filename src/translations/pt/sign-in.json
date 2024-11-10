@@ -1,0 +1,13 @@
+{
+  "helmet": "Entrar",
+  "title": "Entrar",
+  "forgot": "Esqueceu sua senha?",
+  "next": "Iniciar",
+  "account": "Não tem uma conta?",
+  "guide": "Começar",
+  "other": "OU",
+  "fields": {
+    "email": "Endereço de email",
+    "password": "Senha"
+  }
+}

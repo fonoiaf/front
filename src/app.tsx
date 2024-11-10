@@ -13,6 +13,8 @@ import home_en from 'src/translations/en/home.json';
 import home_pt from 'src/translations/pt/home.json';
 import common_en from 'src/translations/en/common.json';
 import common_pt from 'src/translations/pt/common.json';
+import signIn_pt from 'src/translations/pt/sign-in.json';
+import signIn_en from 'src/translations/en/sign-in.json';
 import { ThemeProvider } from 'src/theme/theme-provider';
 import introduction_en from 'src/translations/en/introduction.json';
 import introduction_pt from 'src/translations/pt/introduction.json';
@@ -29,11 +31,13 @@ export default function App() {
         common: common_en,
         home: home_en,
         introduction: introduction_en,
+        signIn: signIn_en,
       },
       pt: {
         common: common_pt,
         home: home_pt,
         introduction: introduction_pt,
+        signIn: signIn_pt,
       },
     },
   });
