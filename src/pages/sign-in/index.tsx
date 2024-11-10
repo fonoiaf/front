@@ -7,8 +7,8 @@ import { SignInView } from './auth';
 
 // ----------------------------------------------------------------------
 
-export default function Page() {
-  const { t } = useTranslation('sign-in');
+export default function SignIn() {
+  const { t } = useTranslation('signIn');
 
   return (
     <>
