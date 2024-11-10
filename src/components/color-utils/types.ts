@@ -1,4 +1,4 @@
-import type { Theme, SxProps } from '@mui/material/styles';
+import type { Theme, SxProps } from '@mui6/material/styles';
 
 // ----------------------------------------------------------------------
 

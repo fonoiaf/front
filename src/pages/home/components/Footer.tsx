@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
+import IconButton from '@mui6/material/IconButton';
 
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
@@ -7,7 +8,6 @@ import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import TextField from '@mui/material/TextField';
-import IconButton from '@mui/material/IconButton';
 import InputLabel from '@mui/material/InputLabel';
 import Typography from '@mui/material/Typography';
 import GitHubIcon from '@mui/icons-material/GitHub';

@@ -1,10 +1,10 @@
 import type { BoxProps } from '@mui/material/Box';
 
 import { forwardRef, useCallback } from 'react';
+import ButtonBase from '@mui6/material/ButtonBase';
 
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
-import ButtonBase from '@mui/material/ButtonBase';
 import { alpha as hexAlpha } from '@mui/material/styles';
 
 import { varAlpha } from 'src/theme/styles';
