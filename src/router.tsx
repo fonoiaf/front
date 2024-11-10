@@ -11,6 +11,7 @@ import { DashboardLayout } from 'src/layouts/dashboard';
 // ----------------------------------------------------------------------
 
 export const HomePage = lazy(() => import('src/pages/home'));
+export const MarketingPage = lazy(() => import('src/pages/home/MarketingPage'));
 export const BlogPage = lazy(() => import('src/pages/blog'));
 export const WordPage = lazy(() => import('src/pages/word'));
 export const UserPage = lazy(() => import('src/pages/user'));
@@ -40,7 +41,8 @@ const renderFallback = (
 
 export function Router() {
   return useRoutes([
-    { element: <HomePage />, index: true },
+    // { element: <HomePage />, index: true },
+    { element: <MarketingPage />, index: true },
     {
       element: (
         <DashboardLayout>
