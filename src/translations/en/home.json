@@ -14,10 +14,7 @@
         "our": "Our latest",
         "products": "products",
         "description": "Explore our cutting-edge dashboard, delivering high-quality solutions tailored to your needs. Elevate your experience with top-tier features and services.",
-        "email": "E-mail",
         "start": "Start now",
-        "enter": "Enter your email address",
-        "emailPlaceholder": "Your email address",
         "terms": {
             "click": "By clicking",
             "start": "Start now",
@@ -78,7 +75,90 @@
     "pricing": {
         "title": "Pricing",
         "subtitle": "Quickly build an effective pricing table for your potential customers with this layout.",
-        "description": "It's built with default Material UI components with little customization."
+        "description": "It's built with default Material UI components with little customization.",
+        "tiers": {
+            "free": {
+                "title": "Free",
+                "price": "0",
+                "buttonText": "Sign up for free",
+                "buttonVariant": "outlined",
+                "buttonColor": "primary",
+                "description": ["10 users included", "2 GB of storage", "Help center access", "Email support"]
+            },
+            "professional": {
+                "title": "Professional",
+                "price": "15",
+                "subheader": "Recommended",
+                "buttonText": "Start now",
+                "buttonVariant": "contained",
+                "buttonColor": "secondary",
+                "description": ["20 users included", "10 GB of storage", "Help center access", "Priority email support", "Dedicated team", "Best deals"]
+            },
+            "enterprise": {
+                "title": "Enterprise",
+                "price": "30",
+                "buttonText": "Contact us",
+                "buttonVariant": "outlined",
+                "buttonColor": "primary",
+                "description": ["50 users included", "30 GB of storage", "Help center access", "Phone & email support"]
+            }
+        }
+    },
+    "faq": {
+        "title": "Frequently asked questions",
+        "items": {
+            "suport": {
+                "ask": "How do I contact customer support if I have a question or issue?",
+                "answer": "You can reach our customer support team by emailing",
+                "email": "support@email.com",
+                "answerEnd": "or calling our toll-free number. We're here to assist you promptly."
+            },
+            "expectations": {
+                "ask": "Can I return the product if it doesn't meet my expectations?",
+                "answer": "Absolutely! We offer a hassle-free return policy. If you're not completely satisfied, you can return the product within [number of days] days for a full refund or exchange."
+            },
+            "highlight": {
+                "ask": "What makes your product stand out from others in the market?",
+                "answer": "Our product distinguishes itself through its adaptability, durability, and innovative features. We prioritize user satisfaction and continually strive to exceed expectations in every aspect."
+            },
+            "warranty": {
+                "ask": "Is there a warranty on the product, and what does it cover?",
+                "answer": "Yes, our product comes with a [length of warranty] warranty. It covers defects in materials and workmanship. If you encounter any issues covered by the warranty, please contact our customer support for assistance."
+            }
+        }
+    },
+    "footer": {
+        "title": "Fonoiaf (IAF)",
+        "newsletter": "Join the newsletter",
+        "newsletterDescription": "Subscribe for weekly updates. No spams ever!",
+        "subscribe": "Subscribe",
+        "product": "Product",
+        "company": {
+            "title": "Company",
+            "about": "About us",
+            "carrers": "Careers",
+            "press": "Press"
+        },
+        "legal": {
+            "title": "Legal",
+            "terms": "Terms",
+            "privacy": "Privacy",
+            "contact": "Contact"
+        },
+        "copyright": {
+            "policy": "Privacy Policy",
+            "terms": "Terms of Service"
+        },
+        "social": {
+
+        }
+    },
+    "commons": {
+        "email": {
+            "title": "Email",
+            "ariaLabel": "Enter your email address",
+            "placeholder": "Your email address"
+        }
     },
     "title":"Our latest products"
 }

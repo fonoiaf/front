@@ -5,7 +5,7 @@
         "testimonials": "Depoimentos",
         "hightlights": "Destaques",
         "pricing": "Preços",
-        "faq": "FAQ",
+        "faq": "FAQs",
         "blog": "Blog",
         "signIn": "Entrar",
         "signUp": "Cadastrar"
@@ -78,7 +78,90 @@
     "pricing": {
         "title": "Preços",
         "subtitle": "Crie rapidamente uma tabela de preços eficaz para seus clientes em potencial com este layout.",
-        "description": "Ele foi criado com componentes padrão do Material UI com pouca personalização."
+        "description": "Ele foi criado com componentes padrão do Material UI com pouca personalização.",
+        "tiers": {
+            "free": {
+                "title": "Gratuita",
+                "price": "0",
+                "buttonText": "Sign up for free",
+                "buttonVariant": "outlined",
+                "buttonColor": "primary",
+                "description": ["10 users included", "2 GB of storage", "Help center access", "Email support"]
+            },
+            "professional": {
+                "title": "Profissional",
+                "price": "15",
+                "subheader": "Recommended",
+                "buttonText": "Start now",
+                "buttonVariant": "contained",
+                "buttonColor": "secondary",
+                "description": ["20 users included", "10 GB of storage", "Help center access", "Priority email support", "Dedicated team", "Best deals"]
+            },
+            "enterprise": {
+                "title": "Empresarial",
+                "price": "30",
+                "buttonText": "Contact us",
+                "buttonVariant": "outlined",
+                "buttonColor": "primary",
+                "description": ["50 users included", "30 GB of storage", "Help center access", "Phone & email support"]
+            }
+        }
     },
-    "title":"Nossos ultimos produtos"
+    "faq": {
+        "title": "Perguntas frequentes",
+        "items": {
+            "suport": {
+                "ask": "Como entro em contato com o suporte ao cliente se tiver alguma dúvida ou problema?",
+                "answer": "Você pode entrar em contato com nossa equipe de suporte ao cliente enviando um e-mail para",
+                "email": "support@email.com",
+                "answerEnd": "ou ligando para nosso número gratuito. Estamos aqui para ajudar você prontamente."
+            },
+            "expectations": {
+                "ask": "Posso devolver o produto se ele não atender às minhas expectativas?",
+                "answer": "Absolutamente! Oferecemos uma política de devolução sem complicações. Se você não estiver completamente satisfeito, pode devolver o produto dentro de [número de dias] dias para um reembolso total ou troca."
+            },
+            "highlight": {
+                "ask": "O que faz seu produto se destacar dos demais no mercado?",
+                "answer": "Nosso produto se distingue por sua adaptabilidade, durabilidade e características inovadoras. Priorizamos a satisfação do usuário e nos esforçamos continuamente para superar as expectativas em todos os aspectos."
+            },
+            "warranty": {
+                "ask": "Existe garantia para o produto e o que ela cobre?",
+                "answer": "Sim, nosso produto vem com uma garantia [duração da garantia]. Ela cobre defeitos de materiais e de fabricação. Se você encontrar algum problema coberto pela garantia, entre em contato com nosso suporte ao cliente para obter assistência."
+            }
+        }
+    },
+    "footer": {
+        "title": "Fonoiaf (IAF)",
+        "newsletter": "Inscreva-se na newsletter",
+        "newsletterDescription": "Inscreva-se para receber atualizações semanais. Nada de spams nunca!",
+        "subscribe": "Inscrever-se",
+        "product": "Produto",
+        "company": {
+            "title": "Empresa",
+            "about": "Sobre nós",
+            "carrers": "Carreira",
+            "press": "Imprensa"
+        },
+        "legal": {
+            "title": "Jurídico",
+            "terms": "Termos",
+            "privacy": "Privacidade",
+            "contact": "Contato"
+        },
+        "copyright": {
+            "policy": "Política de privacidade",
+            "terms": "Termos de serviço"
+        },
+        "social": {
+
+        }
+    },
+    "commons": {
+        "email": {
+            "title": "E-mail",
+            "ariaLabel": "Insira seu endereço de e-mail",
+            "placeholder": "Seu endereço de email"
+        }
+    },
+    "title":"Nossos últimos produtos"
 }
