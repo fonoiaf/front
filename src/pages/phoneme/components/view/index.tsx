@@ -38,20 +38,7 @@ export function PhonemeView() {
     actions: '',
   };
 
-  const i18nEn = {
-    labelRowsPerPage: 'Lines per Page',
-    name: 'Name',
-    company: 'Company',
-    role: 'Role',
-    isVerified: 'Verified',
-    status: 'Status',
-    actions: '',
-  };
-
-  console.log(i18nEn);
-
   const table = useTable();
-
   const [filterName, setFilterName] = useState('');
 
   const dataFiltered: UserProps[] = applyFilter({
@@ -141,7 +128,7 @@ export function PhonemeView() {
           count={_phonemes.length}
           rowsPerPage={table.rowsPerPage}
           onPageChange={table.onChangePage}
-          rowsPerPageOptions={[5, 10, 25]}
+          rowsPerPageOptions={[5, 10, 25, 50]}
           onRowsPerPageChange={table.onChangeRowsPerPage}
           labelRowsPerPage={i18n.labelRowsPerPage}
         />
@@ -155,7 +142,7 @@ export function PhonemeView() {
 export function useTable() {
   const [page, setPage] = useState(0);
   const [orderBy, setOrderBy] = useState('name');
-  const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [rowsPerPage, setRowsPerPage] = useState(50);
   const [selected, setSelected] = useState<string[]>([]);
   const [order, setOrder] = useState<'asc' | 'desc'>('asc');
 
