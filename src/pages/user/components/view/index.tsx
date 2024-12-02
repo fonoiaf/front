@@ -29,7 +29,25 @@ import type { UserProps } from '../user-table-row';
 export function UserView() {
   const i18n = {
     labelRowsPerPage: 'Linhas por Página',
+    name: 'Nome',
+    company: 'Empresa',
+    role: 'Papel',
+    isVerified: 'Verificado',
+    status: 'Status',
+    actions: '',
   };
+
+  const i18nEn = {
+    labelRowsPerPage: 'Lines per Page',
+    name: 'Name',
+    company: 'Company',
+    role: 'Role',
+    isVerified: 'Verified',
+    status: 'Status',
+    actions: '',
+  };
+
+  console.log(i18nEn);
 
   const table = useTable();
 
@@ -84,11 +102,11 @@ export function UserView() {
                   )
                 }
                 headLabel={[
-                  { id: 'name', label: 'Name' },
-                  { id: 'company', label: 'Company' },
-                  { id: 'role', label: 'Role' },
-                  { id: 'isVerified', label: 'Verified', align: 'center' },
-                  { id: 'status', label: 'Status' },
+                  { id: 'name', label: i18n.name },
+                  { id: 'company', label: i18n.company },
+                  { id: 'role', label: i18n.role },
+                  { id: 'isVerified', label: i18n.isVerified, align: 'center' },
+                  { id: 'status', label: i18n.status },
                   { id: '' },
                 ]}
               />
