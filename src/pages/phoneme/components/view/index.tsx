@@ -93,13 +93,13 @@ export function PhonemeView() {
               <UserTableHead
                 order={table.order}
                 orderBy={table.orderBy}
-                rowCount={_users.length}
+                rowCount={_phonemes.length}
                 numSelected={table.selected.length}
                 onSort={table.onSort}
                 onSelectAllRows={(checked) =>
                   table.onSelectAllRows(
                     checked,
-                    _users.map((user) => user.id)
+                    _phonemes.map((phoneme) => phoneme.id)
                   )
                 }
                 headLabel={[
@@ -126,7 +126,7 @@ export function PhonemeView() {
 
                 <TableEmptyRows
                   height={68}
-                  emptyRows={emptyRows(table.page, table.rowsPerPage, _users.length)}
+                  emptyRows={emptyRows(table.page, table.rowsPerPage, _phonemes.length)}
                 />
 
                 {notFound && <TableNoData searchQuery={filterName} />}
@@ -138,7 +138,7 @@ export function PhonemeView() {
         <TablePagination
           component="div"
           page={table.page}
-          count={_users.length}
+          count={_phonemes.length}
           rowsPerPage={table.rowsPerPage}
           onPageChange={table.onChangePage}
           rowsPerPageOptions={[5, 10, 25]}
