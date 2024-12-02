@@ -18,6 +18,12 @@ import {
 // ----------------------------------------------------------------------
 
 export const _myAccount = {
+  displayName: 'Leticia Pacheco',
+  email: 'leticia@pacheco.br',
+  photoURL: '/assets/images/avatar/avatar-25.webp',
+};
+
+export const _myAccount_EN = {
   displayName: 'Jaydon Frankie',
   email: 'demo@minimals.cc',
   photoURL: '/assets/images/avatar/avatar-25.webp',
