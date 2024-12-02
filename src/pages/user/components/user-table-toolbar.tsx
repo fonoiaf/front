@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 import Tooltip from '@mui/material/Tooltip';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -16,6 +18,8 @@ type UserTableToolbarProps = {
 };
 
 export function UserTableToolbar({ numSelected, filterName, onFilterName }: UserTableToolbarProps) {
+  const { t } = useTranslation('user');
+
   return (
     <Toolbar
       sx={{
@@ -38,7 +42,7 @@ export function UserTableToolbar({ numSelected, filterName, onFilterName }: User
           fullWidth
           value={filterName}
           onChange={onFilterName}
-          placeholder="Search user..."
+          placeholder={t('search') ?? 'Search user...'}
           startAdornment={
             <InputAdornment position="start">
               <Iconify width={20} icon="eva:search-fill" sx={{ color: 'text.disabled' }} />
