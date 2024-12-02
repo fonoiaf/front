@@ -31,7 +31,7 @@ export const _users = [...Array(24)].map((_, index) => ({
   company: _company_PT(index),
   isVerified: _boolean(index),
   avatarUrl: `/assets/images/avatar/avatar-${index + 1}.webp`,
-  status: index % 4 ? 'active' : 'banned',
+  status: index % 4 ? 'ative' : 'banido',
   role: _jobTitle_PT(index),
 }));
 
