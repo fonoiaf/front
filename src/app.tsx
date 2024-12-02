@@ -5,12 +5,17 @@ import { I18nextProvider } from 'react-i18next';
 
 import Fab from '@mui/material/Fab';
 
+import { Router } from 'src/router';
+// eslint-disable-next-line perfectionist/sort-imports
+import { Iconify } from 'src/components/iconify';
+// eslint-disable-next-line perfectionist/sort-imports
 import { useScrollToTop } from 'src/hooks/use-scroll-to-top';
 
-import { Router } from 'src/router';
 // TRANSLATIONS ---------------------------------------------------
 import home_en from 'src/translations/en/home.json';
 import home_pt from 'src/translations/pt/home.json';
+import user_en from 'src/translations/en/user.json';
+import user_pt from 'src/translations/pt/user.json';
 import common_en from 'src/translations/en/common.json';
 import common_pt from 'src/translations/pt/common.json';
 import signIn_pt from 'src/translations/pt/sign-in.json';
@@ -19,7 +24,6 @@ import { ThemeProvider } from 'src/theme/theme-provider';
 import introduction_en from 'src/translations/en/introduction.json';
 import introduction_pt from 'src/translations/pt/introduction.json';
 
-import { Iconify } from 'src/components/iconify';
 // ---------------------------------------------------
 
 export default function App() {
@@ -29,11 +33,13 @@ export default function App() {
     resources: {
       en: {
         common: common_en,
+        user: user_en,
         home: home_en,
         introduction: introduction_en,
         signIn: signIn_en,
       },
       pt: {
+        user: user_pt,
         common: common_pt,
         home: home_pt,
         introduction: introduction_pt,
