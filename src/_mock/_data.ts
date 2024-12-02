@@ -2,8 +2,10 @@ import {
   _id,
   _price,
   _times,
+  _simbol,
   _company,
   _boolean,
+  _phoneme,
   _fullName,
   _jobTitle,
   _taskNames,
@@ -13,6 +15,7 @@ import {
   _fullName_PT,
   _description,
   _productNames,
+  _phoneme_type,
 } from './_mock';
 
 // ----------------------------------------------------------------------
@@ -49,6 +52,15 @@ export const _users_EN = [...Array(24)].map((_, index) => ({
   avatarUrl: `/assets/images/avatar/avatar-${index + 1}.webp`,
   status: index % 4 ? 'active' : 'banned',
   role: _jobTitle(index),
+}));
+
+// ----------------------------------------------------------------------
+
+export const _phonemes = [...Array(24)].map((_, index) => ({
+  id: _id(index),
+  name: _phoneme(index),
+  simbol: _simbol(index),
+  type: _phoneme_type(index),
 }));
 
 // ----------------------------------------------------------------------

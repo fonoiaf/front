@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 import TableContainer from '@mui/material/TableContainer';
 import TablePagination from '@mui/material/TablePagination';
 
-import { _users } from 'src/_mock';
+import { _phonemes } from 'src/_mock';
 import { DashboardContent } from 'src/layouts/dashboard';
 
 import { Iconify } from 'src/components/iconify';
@@ -33,10 +33,8 @@ export function PhonemeView() {
   const i18n = {
     labelRowsPerPage: 'Linhas por Página',
     name: 'Nome',
-    company: 'Empresa',
-    role: 'Papel',
-    isVerified: 'Verificado',
-    status: 'Status',
+    simbol: 'Simbolo',
+    type: 'Tipo',
     actions: '',
   };
 
@@ -57,7 +55,7 @@ export function PhonemeView() {
   const [filterName, setFilterName] = useState('');
 
   const dataFiltered: UserProps[] = applyFilter({
-    inputData: _users,
+    inputData: _phonemes,
     comparator: getComparator(table.order, table.orderBy),
     filterName,
   });
@@ -106,10 +104,8 @@ export function PhonemeView() {
                 }
                 headLabel={[
                   { id: 'name', label: i18n.name },
-                  { id: 'company', label: i18n.company },
-                  { id: 'role', label: i18n.role },
-                  { id: 'isVerified', label: i18n.isVerified, align: 'center' },
-                  { id: 'status', label: i18n.status },
+                  { id: 'company', label: i18n.simbol },
+                  { id: 'role', label: i18n.type },
                   { id: '' },
                 ]}
               />
