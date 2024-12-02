@@ -1,6 +1,6 @@
 {
-    "typescript.tsdk": "node_modules/typescript/lib",
+    // "typescript.tsdk": "node_modules/typescript/lib",
     // "typescript.tsserver.experimental.useVsCodeWatcher": false,
-    "typescript.tsserver.watchOptions": "vscode",
+    // "typescript.tsserver.watchOptions": "vscode",
     // "typescript.tsserver.trace": "verbose",
 }

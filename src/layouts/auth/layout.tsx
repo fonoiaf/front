@@ -1,5 +1,7 @@
 import type { Theme, SxProps, Breakpoint } from '@mui/material/styles';
 
+import { useTranslation } from 'react-i18next';
+
 import Link from '@mui/material/Link';
 import Alert from '@mui/material/Alert';
 
@@ -23,6 +25,7 @@ export type AuthLayoutProps = {
 };
 
 export function AuthLayout({ sx, children, header }: AuthLayoutProps) {
+  const { t } = useTranslation('signIn');
   const layoutQuery: Breakpoint = 'md';
 
   return (
@@ -56,7 +59,7 @@ export function AuthLayout({ sx, children, header }: AuthLayoutProps) {
                 color="inherit"
                 sx={{ typography: 'subtitle2' }}
               >
-                Need help?
+                {t('needHelp')}
               </Link>
             ),
           }}

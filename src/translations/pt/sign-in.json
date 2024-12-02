@@ -6,6 +6,7 @@
   "account": "Não tem uma conta?",
   "guide": "Começar",
   "other": "OU",
+  "needHelp": "Precisa de Ajuda?",
   "fields": {
     "email": "Endereço de email",
     "password": "Senha"
