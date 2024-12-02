@@ -1,5 +1,7 @@
 {
   "helmet": "Usuários",
   "title": "Usuários",
-  "new": "Novo usuário"
+  "new": "Novo usuário",
+  "edit": "Editar",
+  "delete": "Excluir"
 }
