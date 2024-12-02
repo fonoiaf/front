@@ -85,12 +85,6 @@ export const _fullName_PT = (index: number) =>
     'João Pedro Castro',
   ][index];
 
-export const _price = (index: number) =>
-  [
-    35.17, 57.22, 64.78, 50.79, 9.57, 61.46, 96.73, 63.04, 33.18, 36.3, 54.42, 20.52, 62.82, 19.96,
-    25.93, 70.39, 23.11, 67.23, 14.31, 31.5, 26.72, 44.8, 37.87, 75.53,
-  ][index];
-
 export const _company = (index: number) =>
   [
     'Medhurst, Moore and Franey',
@@ -201,6 +195,12 @@ export const _boolean = (index: number) =>
     true,
     true,
     false,
+  ][index];
+
+export const _price = (index: number) =>
+  [
+    35.17, 57.22, 64.78, 50.79, 9.57, 61.46, 96.73, 63.04, 33.18, 36.3, 54.42, 20.52, 62.82, 19.96,
+    25.93, 70.39, 23.11, 67.23, 14.31, 31.5, 26.72, 44.8, 37.87, 75.53,
   ][index];
 
 export const _postTitles = (index: number) =>
