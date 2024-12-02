@@ -10,8 +10,11 @@ import { Router } from 'src/router';
 import { Iconify } from 'src/components/iconify';
 // eslint-disable-next-line perfectionist/sort-imports
 import { useScrollToTop } from 'src/hooks/use-scroll-to-top';
+// eslint-disable-next-line perfectionist/sort-imports
+import { ThemeProvider } from 'src/theme/theme-provider';
 
 // TRANSLATIONS ---------------------------------------------------
+// eslint-disable-next-line perfectionist/sort-imports
 import home_en from 'src/translations/en/home.json';
 import home_pt from 'src/translations/pt/home.json';
 import user_en from 'src/translations/en/user.json';
@@ -20,7 +23,8 @@ import common_en from 'src/translations/en/common.json';
 import common_pt from 'src/translations/pt/common.json';
 import signIn_pt from 'src/translations/pt/sign-in.json';
 import signIn_en from 'src/translations/en/sign-in.json';
-import { ThemeProvider } from 'src/theme/theme-provider';
+import phoneme_en from 'src/translations/en/phoneme.json';
+import phoneme_pt from 'src/translations/pt/phoneme.json';
 import introduction_en from 'src/translations/en/introduction.json';
 import introduction_pt from 'src/translations/pt/introduction.json';
 
@@ -32,18 +36,20 @@ export default function App() {
     lng: 'pt',
     resources: {
       en: {
-        common: common_en,
         user: user_en,
         home: home_en,
-        introduction: introduction_en,
         signIn: signIn_en,
+        common: common_en,
+        phoneme: phoneme_en,
+        introduction: introduction_en,
       },
       pt: {
         user: user_pt,
-        common: common_pt,
         home: home_pt,
-        introduction: introduction_pt,
         signIn: signIn_pt,
+        common: common_pt,
+        phoneme: phoneme_pt,
+        introduction: introduction_pt,
       },
     },
   });

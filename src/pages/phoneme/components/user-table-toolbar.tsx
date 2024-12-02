@@ -18,7 +18,7 @@ type UserTableToolbarProps = {
 };
 
 export function UserTableToolbar({ numSelected, filterName, onFilterName }: UserTableToolbarProps) {
-  const { t } = useTranslation('user');
+  const { t } = useTranslation('phoneme');
 
   return (
     <Toolbar
@@ -42,7 +42,7 @@ export function UserTableToolbar({ numSelected, filterName, onFilterName }: User
           fullWidth
           value={filterName}
           onChange={onFilterName}
-          placeholder={t('search') ?? 'Search user...'}
+          placeholder={t('search') ?? 'Search phoneme...'}
           startAdornment={
             <InputAdornment position="start">
               <Iconify width={20} icon="eva:search-fill" sx={{ color: 'text.disabled' }} />

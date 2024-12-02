@@ -28,7 +28,7 @@ import type { UserProps } from '../user-table-row';
 // ----------------------------------------------------------------------
 
 export function PhonemeView() {
-  const { t } = useTranslation('user');
+  const { t } = useTranslation('phoneme');
 
   const i18n = {
     labelRowsPerPage: 'Linhas por Página',
@@ -66,7 +66,7 @@ export function PhonemeView() {
     <DashboardContent>
       <Box display="flex" alignItems="center" mb={5}>
         <Typography variant="h4" flexGrow={1}>
-          Fonemas
+          {t('title')}
         </Typography>
         <Button
           variant="contained"

@@ -27,7 +27,7 @@ type UserTableRowProps = {
 };
 
 export function UserTableRow({ row, selected, onSelectRow }: UserTableRowProps) {
-  const { t } = useTranslation('user');
+  const { t } = useTranslation('phoneme');
 
   const [openPopover, setOpenPopover] = useState<HTMLButtonElement | null>(null);
 
