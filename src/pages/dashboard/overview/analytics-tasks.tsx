@@ -162,22 +162,26 @@ function Item({ item, checked, onChange, sx, ...other }: ItemProps) {
         >
           <MenuItem onClick={handleMarkComplete}>
             <Iconify icon="solar:check-circle-bold" />
-            Mark complete
+            {/* Mark complete */}
+            Marcar como concluído
           </MenuItem>
 
           <MenuItem onClick={handleEdit}>
             <Iconify icon="solar:pen-bold" />
-            Edit
+            {/* Edit */}
+            Editar
           </MenuItem>
 
           <MenuItem onClick={handleShare}>
             <Iconify icon="solar:share-bold" />
-            Share
+            {/* Share */}
+            Compartilhar
           </MenuItem>
 
           <MenuItem onClick={handleDelete} sx={{ color: 'error.main' }}>
             <Iconify icon="solar:trash-bin-trash-bold" />
-            Delete
+            {/* Delete */}
+            Excluir
           </MenuItem>
         </MenuList>
       </Popover>

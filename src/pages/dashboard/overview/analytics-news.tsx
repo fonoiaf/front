@@ -14,7 +14,6 @@ import { fToNow } from 'src/utils/format-time';
 import { Iconify } from 'src/components/iconify';
 import { Scrollbar } from 'src/components/scrollbar';
 
-
 // ----------------------------------------------------------------------
 
 type Props = CardProps & {
@@ -42,7 +41,8 @@ export function AnalyticsNews({ title, subheader, list, ...other }: Props) {
           color="inherit"
           endIcon={<Iconify icon="eva:arrow-ios-forward-fill" width={18} sx={{ ml: -0.5 }} />}
         >
-          View all
+          {/* View all */}
+          Ver todos
         </Button>
       </Box>
     </Card>
