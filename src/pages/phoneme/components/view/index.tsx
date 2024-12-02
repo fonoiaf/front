@@ -66,7 +66,7 @@ export function PhonemeView() {
     <DashboardContent>
       <Box display="flex" alignItems="center" mb={5}>
         <Typography variant="h4" flexGrow={1}>
-          {t('title')}
+          Fonemas
         </Typography>
         <Button
           variant="contained"
