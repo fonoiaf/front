@@ -57,6 +57,35 @@ export const _fullName = (index: number) =>
     'Willis Ankunding',
   ][index];
 
+  export const _fullName_PT = (index: number) =>
+    [
+      'João da Silva',
+      'Maria Oliveira',
+      'Teresa Santos',
+      'Salvador Almeida',
+      'Dr. Guadalupe Rocha',
+      'Kelvin Nascimento',
+      'Thelma Pereira',
+      'Kristen Monteiro',
+      'Steve Costa',
+      'Brian Mendes',
+      'Lillie Carvalho',
+      'Sr. Conrad Souza',
+      'Charlene Barbosa',
+      'Kerry Lima',
+      'Betty Moreira',
+      'Tony Almeida PhD',
+      'Sherri Ferreira',
+      'Angel Kulas-Santos',
+      'Dr. Lee Campos-Grant',
+      'Cheryl Ramos',
+      'Billy Martins',
+      'Adam Rodrigues',
+      'Brandon Vieira',
+      'Willis Cunha',
+    ][index];
+  
+
 export const _price = (index: number) =>
   [
     35.17, 57.22, 64.78, 50.79, 9.57, 61.46, 96.73, 63.04, 33.18, 36.3, 54.42, 20.52, 62.82, 19.96,

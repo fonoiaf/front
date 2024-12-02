@@ -7,6 +7,7 @@ import {
   _fullName,
   _taskNames,
   _postTitles,
+  _fullName_PT,
   _description,
   _productNames,
 } from './_mock';
@@ -23,7 +24,7 @@ export const _myAccount = {
 
 export const _users = [...Array(24)].map((_, index) => ({
   id: _id(index),
-  name: _fullName(index),
+  name: _fullName_PT(index),
   company: _company(index),
   isVerified: _boolean(index),
   avatarUrl: `/assets/images/avatar/avatar-${index + 1}.webp`,

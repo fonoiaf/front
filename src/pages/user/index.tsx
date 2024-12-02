@@ -6,7 +6,7 @@ import { UserView } from './components/view';
 
 // ----------------------------------------------------------------------
 
-export default function Page() {
+export default function User() {
   return (
     <>
       <Helmet>
