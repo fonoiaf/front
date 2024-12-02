@@ -56,7 +56,7 @@ export const _users_EN = [...Array(24)].map((_, index) => ({
 
 // ----------------------------------------------------------------------
 
-export const _phonemes = [...Array(24)].map((_, index) => ({
+export const _phonemes = [...Array(31)].map((_, index) => ({
   id: _id(index),
   name: _phoneme(index),
   simbol: _simbol(index),
