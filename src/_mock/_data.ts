@@ -5,8 +5,11 @@ import {
   _company,
   _boolean,
   _fullName,
+  _jobTitle,
   _taskNames,
+  _company_PT,
   _postTitles,
+  _jobTitle_PT,
   _fullName_PT,
   _description,
   _productNames,
@@ -25,23 +28,21 @@ export const _myAccount = {
 export const _users = [...Array(24)].map((_, index) => ({
   id: _id(index),
   name: _fullName_PT(index),
+  company: _company_PT(index),
+  isVerified: _boolean(index),
+  avatarUrl: `/assets/images/avatar/avatar-${index + 1}.webp`,
+  status: index % 4 ? 'active' : 'banned',
+  role: _jobTitle_PT(index),
+}));
+
+export const _users_EN = [...Array(24)].map((_, index) => ({
+  id: _id(index),
+  name: _fullName(index),
   company: _company(index),
   isVerified: _boolean(index),
   avatarUrl: `/assets/images/avatar/avatar-${index + 1}.webp`,
   status: index % 4 ? 'active' : 'banned',
-  role:
-    [
-      'Leader',
-      'Hr Manager',
-      'UI Designer',
-      'UX Designer',
-      'UI/UX Designer',
-      'Project Manager',
-      'Backend Developer',
-      'Full Stack Designer',
-      'Front End Developer',
-      'Full Stack Developer',
-    ][index] || 'UI Designer',
+  role: _jobTitle(index),
 }));
 
 // ----------------------------------------------------------------------

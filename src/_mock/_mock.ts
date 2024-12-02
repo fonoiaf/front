@@ -57,34 +57,33 @@ export const _fullName = (index: number) =>
     'Willis Ankunding',
   ][index];
 
-  export const _fullName_PT = (index: number) =>
-    [
-      'João da Silva',
-      'Maria Oliveira',
-      'Teresa Santos',
-      'Salvador Almeida',
-      'Dr. Guadalupe Rocha',
-      'Kelvin Nascimento',
-      'Thelma Pereira',
-      'Kristen Monteiro',
-      'Steve Costa',
-      'Brian Mendes',
-      'Lillie Carvalho',
-      'Sr. Conrad Souza',
-      'Charlene Barbosa',
-      'Kerry Lima',
-      'Betty Moreira',
-      'Tony Almeida PhD',
-      'Sherri Ferreira',
-      'Angel Kulas-Santos',
-      'Dr. Lee Campos-Grant',
-      'Cheryl Ramos',
-      'Billy Martins',
-      'Adam Rodrigues',
-      'Brandon Vieira',
-      'Willis Cunha',
-    ][index];
-  
+export const _fullName_PT = (index: number) =>
+  [
+    'João da Silva',
+    'Maria Oliveira',
+    'Teresa Santos',
+    'Salvador Almeida',
+    'Dr. Guadalupe Rocha',
+    'Kelvin Nascimento',
+    'Thelma Pereira',
+    'Kristen Monteiro',
+    'Steve Costa',
+    'Brian Mendes',
+    'Lillie Carvalho',
+    'Sr. Conrad Souza',
+    'Charlene Barbosa',
+    'Kerry Lima',
+    'Betty Moreira',
+    'Tony Almeida PhD',
+    'Sherri Ferreira',
+    'Angel Kulas-Santos',
+    'Dr. Lee Campos-Grant',
+    'Cheryl Ramos',
+    'Billy Martins',
+    'Adam Rodrigues',
+    'Brandon Vieira',
+    'Willis Cunha',
+  ][index];
 
 export const _price = (index: number) =>
   [
@@ -119,6 +118,62 @@ export const _company = (index: number) =>
     'Mitchell, Volkman and Prosacco',
     'Streich Group',
   ][index];
+
+export const _company_PT = (index: number) =>
+  [
+    'Havaianas',
+    'Ambev',
+    'Petrobras',
+    'Gerdau',
+    'Caixa Econômica Federal',
+    'Zaffari',
+    'Magazine Luiza',
+    'Natura',
+    'Banco do Brasil',
+    'Vale',
+    'Oi Telecom',
+    'Embraer',
+    'Santander Brasil',
+    'BTG Pactual',
+    'Porto Seguro',
+    'Riachuelo',
+    'Braskem',
+    'Votorantim',
+    'Grupo Pão de Açúcar',
+    'Azul Linhas Aéreas',
+    'Itaú Unibanco',
+    'Bradesco',
+    'Cosan',
+    'Localiza',
+  ][index];
+
+export const _jobTitle = (index: number) =>
+  [
+    'Leader',
+    'Hr Manager',
+    'UI Designer',
+    'UX Designer',
+    'UI/UX Designer',
+    'Project Manager',
+    'Backend Developer',
+    'Full Stack Designer',
+    'Front End Developer',
+    'Full Stack Developer',
+  ][index] || 'UI Designer';
+
+export const _jobTitle_PT = (index: number) =>
+  [
+    'Coordenador de Fonoaudiologia',
+    'Gerente de Recursos Humanos em Clínica de Fonoaudiologia',
+    'Assistente de Terapia da Fala',
+    'Especialista em Voz e Comunicação',
+    'Consultor em Audiologia e Comunicação',
+    'Gestor de Projetos em Saúde Auditiva',
+    'Fonoaudiólogo Clínico',
+    'Fonoaudiólogo Educacional',
+    'Terapeuta da Fala Infantil',
+    'Pesquisador em Fonoaudiologia',
+  ][index] || 'Fonoaudiólogo';
 
 export const _boolean = (index: number) =>
   [
