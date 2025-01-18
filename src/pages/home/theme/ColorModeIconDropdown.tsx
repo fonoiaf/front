@@ -1,10 +1,10 @@
-import type { IconButtonOwnProps } from '@mui6/material/IconButton';
-
 import * as React from 'react';
 import Menu from '@mui6/material/Menu';
 import MenuItem from '@mui6/material/MenuItem';
 import IconButton from '@mui6/material/IconButton';
 import { useColorScheme } from '@mui6/material/styles';
+
+import type { IconButtonOwnProps } from '@mui6/material/IconButton';
 
 import Box from '@mui/material/Box';
 import DarkModeIcon from '@mui/icons-material/DarkModeRounded';

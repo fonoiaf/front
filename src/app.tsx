@@ -1,32 +1,31 @@
-import 'src/global.css';
+import './global.css';
 
 import i18next from 'i18next';
 import { I18nextProvider } from 'react-i18next';
 
 import Fab from '@mui/material/Fab';
 
-import { Router } from 'src/router';
-// eslint-disable-next-line perfectionist/sort-imports
-import { Iconify } from 'src/components/iconify';
-// eslint-disable-next-line perfectionist/sort-imports
-import { useScrollToTop } from 'src/hooks/use-scroll-to-top';
-// eslint-disable-next-line perfectionist/sort-imports
-import { ThemeProvider } from 'src/theme/theme-provider';
-
 // TRANSLATIONS ---------------------------------------------------
-// eslint-disable-next-line perfectionist/sort-imports
-import home_en from 'src/translations/en/home.json';
-import home_pt from 'src/translations/pt/home.json';
-import user_en from 'src/translations/en/user.json';
-import user_pt from 'src/translations/pt/user.json';
-import common_en from 'src/translations/en/common.json';
-import common_pt from 'src/translations/pt/common.json';
-import signIn_pt from 'src/translations/pt/sign-in.json';
-import signIn_en from 'src/translations/en/sign-in.json';
-import phoneme_en from 'src/translations/en/phoneme.json';
-import phoneme_pt from 'src/translations/pt/phoneme.json';
-import introduction_en from 'src/translations/en/introduction.json';
-import introduction_pt from 'src/translations/pt/introduction.json';
+import { ThemeProvider } from '#/theme/theme-provider';
+
+import { useScrollToTop } from '#/hooks/use-scroll-to-top';
+
+import { Iconify } from '#/components/iconify';
+
+import home_en from '#/translations/en/home.json';
+import home_pt from '#/translations/pt/home.json';
+import user_en from '#/translations/en/user.json';
+import user_pt from '#/translations/pt/user.json';
+import common_en from '#/translations/en/common.json';
+import common_pt from '#/translations/pt/common.json';
+import signIn_pt from '#/translations/pt/sign-in.json';
+import signIn_en from '#/translations/en/sign-in.json';
+import phoneme_en from '#/translations/en/phoneme.json';
+import phoneme_pt from '#/translations/pt/phoneme.json';
+import introduction_en from '#/translations/en/introduction.json';
+import introduction_pt from '#/translations/pt/introduction.json';
+
+import { Router } from './router';
 
 // ---------------------------------------------------
 

@@ -7,9 +7,8 @@ import Typography from '@mui/material/Typography';
 import Pagination from '@mui/material/Pagination';
 
 import { _posts } from 'src/_mock';
-import { DashboardContent } from 'src/layouts/dashboard';
-
 import { Iconify } from 'src/components/iconify';
+import { DashboardContent } from 'src/layouts/dashboard';
 
 import { PostItem } from '../post-item';
 import { PostSort } from '../post-sort';

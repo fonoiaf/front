@@ -116,8 +116,8 @@ export default function Hero() {
               hiddenLabel
               size="small"
               variant="outlined"
-              aria-label={t('hero.enter') || "Your email address"}
-              placeholder={t('hero.emailPlaceholder') || "Enter your email address"}
+              aria-label={t('hero.enter') || 'Your email address'}
+              placeholder={t('hero.emailPlaceholder') || 'Enter your email address'}
               autoComplete="off"
               fullWidth
               // slotProps={{

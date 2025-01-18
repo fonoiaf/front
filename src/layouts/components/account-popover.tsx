@@ -1,6 +1,6 @@
-import type { IconButtonProps } from '@mui/material/IconButton';
-
 import { useState, useCallback } from 'react';
+
+import type { IconButtonProps } from '@mui/material/IconButton';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -12,10 +12,9 @@ import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuItem, { menuItemClasses } from '@mui/material/MenuItem';
 
+import { _myAccount } from 'src/_mock';
 import { useRouter } from 'src/hooks/use-router';
 import { usePathname } from 'src/hooks/use-pathname';
-
-import { _myAccount } from 'src/_mock';
 
 // ----------------------------------------------------------------------
 

@@ -1,8 +1,8 @@
-import type { Dayjs } from 'dayjs';
-
 import dayjs from 'dayjs';
 import duration from 'dayjs/plugin/duration';
 import relativeTime from 'dayjs/plugin/relativeTime';
+
+import type { Dayjs } from 'dayjs';
 
 // ----------------------------------------------------------------------
 

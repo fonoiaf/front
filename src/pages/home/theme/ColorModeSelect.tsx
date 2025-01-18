@@ -1,9 +1,9 @@
-import type { SelectProps } from '@mui6/material/Select';
-
 import * as React from 'react';
 import Select from '@mui6/material/Select';
 import MenuItem from '@mui6/material/MenuItem';
 import { useColorScheme } from '@mui6/material/styles';
+
+import type { SelectProps } from '@mui6/material/Select';
 
 export default function ColorModeSelect(props: SelectProps) {
   const { mode, setMode } = useColorScheme();

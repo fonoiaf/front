@@ -15,7 +15,6 @@ import ConstructionRoundedIcon from '@mui/icons-material/ConstructionRounded';
 import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
 import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRounded';
 
-
 export default function Highlights() {
   const { t } = useTranslation('home');
 
@@ -81,7 +80,7 @@ export default function Highlights() {
             {t('highlights.title')}
           </Typography>
           <Typography variant="body1" sx={{ color: 'grey.400' }}>
-          {t('highlights.description')}
+            {t('highlights.description')}
           </Typography>
         </Box>
         <Grid container spacing={2}>

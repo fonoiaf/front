@@ -1,13 +1,12 @@
-import type { Theme, SxProps, Breakpoint } from '@mui/material/styles';
-
 import { useTranslation } from 'react-i18next';
+
+import type { Theme, SxProps, Breakpoint } from '@mui/material/styles';
 
 import Link from '@mui/material/Link';
 import Alert from '@mui/material/Alert';
 
-import { stylesMode } from 'src/theme/styles';
-
 import { Logo } from 'src/components/logo';
+import { stylesMode } from 'src/theme/styles';
 import { RouterLink } from 'src/components/router-link';
 
 import { Main } from './main';

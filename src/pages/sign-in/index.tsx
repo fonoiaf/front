@@ -11,10 +11,8 @@ import Typography from '@mui/material/Typography';
 import LoadingButton from '@mui/lab/LoadingButton';
 import InputAdornment from '@mui/material/InputAdornment';
 
-import { useRouter } from 'src/hooks/use-router';
-
 import { CONFIG } from 'src/config-global';
-
+import { useRouter } from 'src/hooks/use-router';
 import { Iconify } from 'src/components/iconify';
 
 export default function SignIn() {

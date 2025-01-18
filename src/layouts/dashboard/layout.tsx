@@ -1,14 +1,13 @@
-import type { Theme, SxProps, Breakpoint } from '@mui/material/styles';
-
 import { useState } from 'react';
+
+import type { Theme, SxProps, Breakpoint } from '@mui/material/styles';
 
 import Box from '@mui/material/Box';
 import Alert from '@mui/material/Alert';
 import { useTheme } from '@mui/material/styles';
 
-import { _langs, _notifications } from 'src/_mock';
-
 import { Iconify } from 'src/components/iconify';
+import { _langs, _notifications } from 'src/_mock';
 
 import { Main } from './main';
 import { layoutClasses } from '../classes';

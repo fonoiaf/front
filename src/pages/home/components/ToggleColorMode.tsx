@@ -1,7 +1,7 @@
 // import type { PaletteMode } from '@mui/material/styles';
-import type { IconButtonProps } from '@mui/material/IconButton';
-
 import * as React from 'react';
+
+import type { IconButtonProps } from '@mui/material/IconButton';
 
 import IconButton from '@mui/material/IconButton';
 import WbSunnyRoundedIcon from '@mui/icons-material/WbSunnyRounded';

@@ -1,6 +1,6 @@
-import type { ButtonBaseProps } from '@mui/material/ButtonBase';
-
 import { useState, useCallback } from 'react';
+
+import type { ButtonBaseProps } from '@mui/material/ButtonBase';
 
 import Box from '@mui/material/Box';
 import Popover from '@mui/material/Popover';
@@ -9,7 +9,6 @@ import ButtonBase from '@mui/material/ButtonBase';
 import MenuItem, { menuItemClasses } from '@mui/material/MenuItem';
 
 import { varAlpha } from 'src/theme/styles';
-
 import { Label } from 'src/components/label';
 import { Iconify } from 'src/components/iconify';
 

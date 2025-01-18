@@ -1,7 +1,7 @@
-import type { ThemeOptions } from '@mui6/material/styles';
-
 import * as React from 'react';
 import { createTheme, ThemeProvider } from '@mui6/material/styles';
+
+import type { ThemeOptions } from '@mui6/material/styles';
 
 import { inputsCustomizations } from './customizations/inputs';
 import { feedbackCustomizations } from './customizations/feedback';

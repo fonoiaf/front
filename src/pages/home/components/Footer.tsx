@@ -22,7 +22,14 @@ function Copyright() {
   return (
     <Typography variant="body2" sx={{ color: 'text.secondary', mt: 1 }}>
       {'Copyright © '}
-      <Link color="text.secondary" href="fonoia.com.br">
+      <Link
+        color="text.secondary"
+        href="https://fonoiaf.com.br"
+        target="_blank"
+        rel="noopener"
+        // rel=""
+        aria-label="Acessa o Site do Fono IAF"
+      >
         {t('footer.title')}
       </Link>
       &nbsp;

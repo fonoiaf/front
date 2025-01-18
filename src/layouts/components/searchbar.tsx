@@ -1,6 +1,6 @@
-import type { BoxProps } from '@mui/material/Box';
-
 import { useState, useCallback } from 'react';
+
+import type { BoxProps } from '@mui/material/Box';
 
 import Box from '@mui/material/Box';
 import Slide from '@mui/material/Slide';
@@ -12,7 +12,6 @@ import InputAdornment from '@mui/material/InputAdornment';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 
 import { bgBlur } from 'src/theme/styles';
-
 import { Iconify } from 'src/components/iconify';
 
 // ----------------------------------------------------------------------

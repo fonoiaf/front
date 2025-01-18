@@ -1,6 +1,6 @@
-import type { StackParameters, ButtonParameters } from 'src/models';
-
 import { useTranslation } from 'react-i18next';
+
+import type { StackParameters, ButtonParameters } from 'src/models';
 
 import { Stack, Button } from '@mui/material';
 import FlagIcon from '@mui/icons-material/Flag';

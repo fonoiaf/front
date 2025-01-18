@@ -1,6 +1,6 @@
-import type { ButtonProps } from '@mui/material/Button';
-
 import { useState, useCallback } from 'react';
+
+import type { ButtonProps } from '@mui/material/Button';
 
 import Button from '@mui/material/Button';
 import Popover from '@mui/material/Popover';
@@ -8,7 +8,6 @@ import MenuList from '@mui/material/MenuList';
 import MenuItem, { menuItemClasses } from '@mui/material/MenuItem';
 
 import { varAlpha } from 'src/theme/styles';
-
 import { Iconify } from 'src/components/iconify';
 
 // ----------------------------------------------------------------------

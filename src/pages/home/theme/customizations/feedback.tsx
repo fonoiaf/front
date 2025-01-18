@@ -1,6 +1,6 @@
-import type { Theme, Components } from '@mui6/material/styles';
-
 import { alpha } from '@mui6/material/styles';
+
+import type { Theme, Components } from '@mui6/material/styles';
 
 import { gray, orange } from '../themePrimitives';
 
