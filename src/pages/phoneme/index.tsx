@@ -28,7 +28,7 @@ import { emptyRows, applyFilter, getComparator } from '#/components/table-phonem
 
 // ----------------------------------------------------------------------
 
-export function PhonemePage() {
+export default function PhonemePage() {
   const { t } = useTranslation('phoneme');
 
   const i18n = {

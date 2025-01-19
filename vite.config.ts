@@ -32,6 +32,42 @@ export default defineConfig({
         find: /^src(.+)/,
         replacement: path.join(process.cwd(), 'src/$1'),
       },
+      {
+        find: '#/translations',
+        replacement: path.resolve(__dirname, 'src/translations'),
+      },
+      {
+        find: '#/components',
+        replacement: path.resolve(__dirname, 'src/components'),
+      },
+      {
+        find: '#/layouts',
+        replacement: path.resolve(__dirname, 'src/layouts'),
+      },
+      {
+        find: '#/models',
+        replacement: path.resolve(__dirname, 'src/models'),
+      },
+      {
+        find: '#/hooks',
+        replacement: path.resolve(__dirname, 'src/hooks'),
+      },
+      {
+        find: '#/pages',
+        replacement: path.resolve(__dirname, 'src/pages'),
+      },
+      {
+        find: '#/theme',
+        replacement: path.resolve(__dirname, 'src/theme'),
+      },
+      {
+        find: '#/utils',
+        replacement: path.resolve(__dirname, 'src/utils'),
+      },
+      {
+        find: '#',
+        replacement: path.resolve(__dirname, 'src'),
+      },
     ],
   },
   server: { port: PORT, host: true },
