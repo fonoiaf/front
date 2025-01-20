@@ -1,7 +1,7 @@
 import { _phonemes } from '#/_mock';
 import { CONFIG } from '#/config-global';
 import { Helmet } from 'react-helmet-async';
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import PhonemeService from '#/services/phoneme-service';
 
@@ -42,34 +42,54 @@ export default function PhonemePage() {
 
   const table = useTable();
   const [filterName, setFilterName] = useState('');
+  const [dataFiltered, setDataFiltered] = useState<UserProps[]>([]);
 
   const phonemeService = PhonemeService();
-  const all: UserProps[] = [];
 
-  phonemeService
-    .fetchPhonemes('')
-    .then((response) => {
-      // handle success
-      console.log(response);
+  const handleSubmit = useCallback(() => {
+    const all: UserProps[] = [];
+    phonemeService
+      .fetchPhonemes('')
+      .then((response) => {
+        // handle success
+        console.log(response);
 
-      (response.data as Array<any>).forEach((element: any) => {
-        console.log(element);
-        all.push(element);
+        (response.data as Array<any>).forEach((element: any) => {
+          all.push(element);
+          // console.log(all);
+        });
+
+        const bar = applyFilter({
+          inputData: response.data,
+          comparator: getComparator(table.order, table.orderBy),
+          filterName,
+        });
+
+        setDataFiltered((prev) => ({ ...prev, bar }));
+      })
+      .catch((error) => {
+        // handle error
+        console.log(error);
+      })
+      .finally(() => {
+        // always executed
       });
-    })
-    .catch((error) => {
-      // handle error
-      console.log(error);
-    })
-    .finally(() => {
-      // always executed
-    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const dataFiltered: UserProps[] = applyFilter({
-    inputData: all,
-    comparator: getComparator(table.order, table.orderBy),
-    filterName,
-  });
+  useEffect(() => {
+    handleSubmit();
+  }, [handleSubmit]); // ✅ All dependencies declared
+  // ...
+
+  // const fobar = await phonemeService.fetchPhonemes('');
+  // all.concat(fobar.data);
+
+  // const dataFiltered: UserProps[] = applyFilter({
+  //   inputData: all,
+  //   comparator: getComparator(table.order, table.orderBy),
+  //   filterName,
+  // });
 
   const notFound = !dataFiltered.length && !!filterName;
 
