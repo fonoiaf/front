@@ -47,7 +47,7 @@ export function UserTableRow({ row, selected, onSelectRow }: UserTableRowProps) 
         </TableCell>
 
         <TableCell>{row.name}</TableCell>
-        <TableCell>{row.simbol}</TableCell>
+        <TableCell>{row.symbol}</TableCell>
         <TableCell>{row.type}</TableCell>
 
         <TableCell align="right">
