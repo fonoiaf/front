@@ -20,4 +20,19 @@ declare global {
   }
 }
 
+interface ImportMetaEnv {
+  readonly GITHUB_AUTH_TOKEN: string;
+  readonly NODE_ENV: string;
+  readonly PORT: string;
+  readonly PWD: string;
+  readonly API: string;
+  readonly TIMEOUT: string;
+  readonly VITE_APP_TITLE: string;
+  // more env variables...
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
+
 export {};

@@ -52,7 +52,8 @@ export default function PhonemePage() {
       // handle success
       console.log(response);
 
-      (response.data as Array<UserProps>).forEach((element: UserProps) => {
+      (response.data as Array<any>).forEach((element: any) => {
+        console.log(element);
         all.push(element);
       });
     })
