@@ -3,6 +3,7 @@ import { CONFIG } from '#/config-global';
 import { Helmet } from 'react-helmet-async';
 import { useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
+import PhonemeService from '#/services/phoneme-service';
 
 import type { UserProps } from '#/components/table-phoneme/user-table-row';
 
@@ -41,6 +42,22 @@ export default function PhonemePage() {
 
   const table = useTable();
   const [filterName, setFilterName] = useState('');
+
+  const phonemeService = PhonemeService();
+
+  phonemeService
+    .fetchPhonemes('')
+    .then((response) => {
+      // handle success
+      console.log(response);
+    })
+    .catch((error) => {
+      // handle error
+      console.log(error);
+    })
+    .finally(() => {
+      // always executed
+    });
 
   const dataFiltered: UserProps[] = applyFilter({
     inputData: _phonemes,
