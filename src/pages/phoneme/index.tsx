@@ -44,12 +44,17 @@ export default function PhonemePage() {
   const [filterName, setFilterName] = useState('');
 
   const phonemeService = PhonemeService();
+  const all: UserProps[] = [];
 
   phonemeService
     .fetchPhonemes('')
     .then((response) => {
       // handle success
       console.log(response);
+
+      (response.data as Array<UserProps>).forEach((element: UserProps) => {
+        all.push(element);
+      });
     })
     .catch((error) => {
       // handle error
@@ -60,7 +65,7 @@ export default function PhonemePage() {
     });
 
   const dataFiltered: UserProps[] = applyFilter({
-    inputData: _phonemes,
+    inputData: all,
     comparator: getComparator(table.order, table.orderBy),
     filterName,
   });
