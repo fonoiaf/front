@@ -35,7 +35,7 @@ export default function PhonemePage() {
   const i18n = {
     labelRowsPerPage: 'Linhas por Página',
     name: 'Nome',
-    simbol: 'Simbolo',
+    symbol: 'Simbolo',
     type: 'Tipo',
     actions: '',
   };
@@ -65,7 +65,7 @@ export default function PhonemePage() {
           filterName,
         });
 
-        setDataFiltered((prev) => ({ ...prev, bar }));
+        setDataFiltered(() => [...bar]);
       })
       .catch((error) => {
         // handle error
@@ -77,6 +77,7 @@ export default function PhonemePage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  // https://18.react.dev/reference/react/useEffect
   useEffect(() => {
     handleSubmit();
   }, [handleSubmit]); // ✅ All dependencies declared
@@ -140,7 +141,7 @@ export default function PhonemePage() {
                   }
                   headLabel={[
                     { id: 'name', label: i18n.name },
-                    { id: 'company', label: i18n.simbol },
+                    { id: 'company', label: i18n.symbol },
                     { id: 'role', label: i18n.type },
                     { id: '' },
                   ]}
