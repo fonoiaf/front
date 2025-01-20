@@ -17,7 +17,7 @@ export type UserProps = {
   id: string;
   name: string;
   type: string;
-  simbol: string;
+  symbol: string;
 };
 
 type UserTableRowProps = {
