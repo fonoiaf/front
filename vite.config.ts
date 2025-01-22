@@ -33,39 +33,39 @@ export default defineConfig({
         replacement: path.join(process.cwd(), 'src/$1'),
       },
       {
-        find: '#/translations/',
+        find: '#/translations',
         replacement: path.resolve(__dirname, 'src/translations'),
       },
       {
-        find: '#/components/',
+        find: '#/components',
         replacement: path.resolve(__dirname, 'src/components'),
       },
       {
-        find: '#/layouts/',
+        find: '#/layouts',
         replacement: path.resolve(__dirname, 'src/layouts'),
       },
       {
-        find: '#/models/',
+        find: '#/models',
         replacement: path.resolve(__dirname, 'src/models'),
       },
       {
-        find: '#/hooks/',
-        replacement: path.resolve(__dirname, 'src/hooks/'),
+        find: '#/hooks',
+        replacement: path.resolve(__dirname, 'src/hooks'),
       },
       {
-        find: '#/pages/',
+        find: '#/pages',
         replacement: path.resolve(__dirname, 'src/pages'),
       },
       {
-        find: '#/theme/',
+        find: '#/theme',
         replacement: path.resolve(__dirname, 'src/theme'),
       },
       {
-        find: '#/utils/',
+        find: '#/utils',
         replacement: path.resolve(__dirname, 'src/utils'),
       },
       {
-        find: '#/',
+        find: '#',
         replacement: path.resolve(__dirname, 'src'),
       },
     ],
