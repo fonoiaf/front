@@ -31,6 +31,8 @@ import { emptyRows, applyFilter, getComparator } from '#/components/table-phonem
 
 export default function PhonemePage() {
   const { t } = useTranslation('phoneme');
+  const dataPhonemes = _phonemes;
+  console.log(dataPhonemes);
 
   const i18n = {
     labelRowsPerPage: 'Linhas por Página',
@@ -130,13 +132,13 @@ export default function PhonemePage() {
                 <UserTableHead
                   order={table.order}
                   orderBy={table.orderBy}
-                  rowCount={_phonemes.length}
+                  rowCount={dataFiltered.length}
                   numSelected={table.selected.length}
                   onSort={table.onSort}
                   onSelectAllRows={(checked) =>
                     table.onSelectAllRows(
                       checked,
-                      _phonemes.map((phoneme) => phoneme.id)
+                      dataFiltered.map((phoneme) => phoneme.id)
                     )
                   }
                   headLabel={[
@@ -163,7 +165,7 @@ export default function PhonemePage() {
 
                   <TableEmptyRows
                     height={68}
-                    emptyRows={emptyRows(table.page, table.rowsPerPage, _phonemes.length)}
+                    emptyRows={emptyRows(table.page, table.rowsPerPage, dataFiltered.length)}
                   />
 
                   {notFound && <TableNoData searchQuery={filterName} />}
@@ -175,7 +177,7 @@ export default function PhonemePage() {
           <TablePagination
             component="div"
             page={table.page}
-            count={_phonemes.length}
+            count={dataFiltered.length}
             rowsPerPage={table.rowsPerPage}
             onPageChange={table.onChangePage}
             rowsPerPageOptions={[5, 10, 25, 50]}
