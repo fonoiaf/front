@@ -20,13 +20,20 @@ export type UserProps = {
   symbol: string;
 };
 
-type UserTableRowProps = {
-  row: UserProps;
+export type PhonemeProps = {
+  id: string;
+  name: string;
+  type: string;
+  symbol: string;
+};
+
+type UserTableRowProps<T> = {
+  row: T;
   selected: boolean;
   onSelectRow: () => void;
 };
 
-export function UserTableRow({ row, selected, onSelectRow }: UserTableRowProps) {
+export function UserTableRow({ row, selected, onSelectRow }: UserTableRowProps<any>) {
   const { t } = useTranslation('phoneme');
 
   const [openPopover, setOpenPopover] = useState<HTMLButtonElement | null>(null);
@@ -46,9 +53,9 @@ export function UserTableRow({ row, selected, onSelectRow }: UserTableRowProps) 
           <Checkbox disableRipple checked={selected} onChange={onSelectRow} />
         </TableCell>
 
-        <TableCell>{row.name}</TableCell>
-        <TableCell>{row.symbol}</TableCell>
-        <TableCell>{row.type}</TableCell>
+        {Object.keys(row).map((key) => (
+          <TableCell>{row[key]}</TableCell>
+        ))}
 
         <TableCell align="right">
           <IconButton onClick={handleOpenPopover}>

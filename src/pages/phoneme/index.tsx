@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import PhonemeService from '#/services/phoneme-service';
 import { useState, useEffect, useCallback } from 'react';
 
-import type { UserProps } from '#/componentstable/user-table-row';
+import type { UserProps } from '#/components/table/user-table-row';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
