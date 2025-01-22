@@ -20,6 +20,8 @@ import { DashboardContent } from '#/layouts/dashboard';
 
 import { useTable } from '#/hooks/use-table';
 
+import { emptyRows, applyFilter, getComparator } from '#/utils/table';
+
 import { Iconify } from '#/components/iconify';
 import { Scrollbar } from '#/components/scrollbar';
 import { TableNoData } from '#/components/table/table-no-data';
@@ -27,7 +29,6 @@ import { UserTableRow } from '#/components/table/user-table-row';
 import { UserTableHead } from '#/components/table/user-table-head';
 import { TableEmptyRows } from '#/components/table/table-empty-rows';
 import { UserTableToolbar } from '#/components/table/user-table-toolbar';
-import { emptyRows, applyFilter, getComparator } from '#/components/table/utils';
 
 export default function PhonemePage() {
   const { t } = useTranslation('phoneme');
