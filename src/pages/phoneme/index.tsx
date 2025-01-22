@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import PhonemeService from '#/services/phoneme-service';
 import { useState, useEffect, useCallback } from 'react';
 
-import type { UserProps } from '#/components/table/user-table-row';
+import type { UserProps } from '#/components/table/table-row';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -25,10 +25,10 @@ import { emptyRows, applyFilter, getComparator } from '#/utils/table';
 import { Iconify } from '#/components/iconify';
 import { Scrollbar } from '#/components/scrollbar';
 import { TableNoData } from '#/components/table/table-no-data';
-import { UserTableRow } from '#/components/table/user-table-row';
-import { UserTableHead } from '#/components/table/user-table-head';
+import { UserTableRow } from '#/components/table/table-row';
+import { UserTableHead } from '#/components/table/table-head';
 import { TableEmptyRows } from '#/components/table/table-empty-rows';
-import { UserTableToolbar } from '#/components/table/user-table-toolbar';
+import { UserTableToolbar } from '#/components/table/table-toolbar';
 
 export default function PhonemePage() {
   const { t } = useTranslation('phoneme');
