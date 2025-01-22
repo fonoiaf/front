@@ -1,9 +1,9 @@
 import { _phonemes } from '#/_mock';
 import { CONFIG } from '#/config-global';
 import { Helmet } from 'react-helmet-async';
-import { useState, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import PhonemeService from '#/services/phoneme-service';
+import { useState, useEffect, useCallback } from 'react';
 
 import type { UserProps } from '#/components/table-phoneme/user-table-row';
 
@@ -82,16 +82,6 @@ export default function PhonemePage() {
   useEffect(() => {
     handleSubmit();
   }, [handleSubmit]); // ✅ All dependencies declared
-  // ...
-
-  // const fobar = await phonemeService.fetchPhonemes('');
-  // all.concat(fobar.data);
-
-  // const dataFiltered: UserProps[] = applyFilter({
-  //   inputData: all,
-  //   comparator: getComparator(table.order, table.orderBy),
-  //   filterName,
-  // });
 
   const notFound = !dataFiltered.length && !!filterName;
 
