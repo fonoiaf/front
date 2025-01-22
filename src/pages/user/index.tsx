@@ -25,7 +25,6 @@ import { UserTableToolbar } from './components/user-table-toolbar';
 import { emptyRows, applyFilter, getComparator } from './components/utils';
 
 import type { UserProps } from './components/user-table-row';
-// ----------------------------------------------------------------------
 
 export default function User() {
   const { t } = useTranslation('user');
