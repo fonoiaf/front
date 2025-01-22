@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import PhonemeService from '#/services/phoneme-service';
 import { useState, useEffect, useCallback } from 'react';
 
-import type { UserProps } from '#/components/table-phoneme/user-table-row';
+import type { UserProps } from '#/componentstable/user-table-row';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -22,14 +22,12 @@ import { useTable } from '#/hooks/use-table';
 
 import { Iconify } from '#/components/iconify';
 import { Scrollbar } from '#/components/scrollbar';
-import { TableNoData } from '#/components/table-phoneme/table-no-data';
-import { UserTableRow } from '#/components/table-phoneme/user-table-row';
-import { UserTableHead } from '#/components/table-phoneme/user-table-head';
-import { TableEmptyRows } from '#/components/table-phoneme/table-empty-rows';
-import { UserTableToolbar } from '#/components/table-phoneme/user-table-toolbar';
-import { emptyRows, applyFilter, getComparator } from '#/components/table-phoneme/utils';
-
-// ----------------------------------------------------------------------
+import { TableNoData } from '#/components/table/table-no-data';
+import { UserTableRow } from '#/components/table/user-table-row';
+import { UserTableHead } from '#/components/table/user-table-head';
+import { TableEmptyRows } from '#/components/table/table-empty-rows';
+import { UserTableToolbar } from '#/components/table/user-table-toolbar';
+import { emptyRows, applyFilter, getComparator } from '#/components/table/utils';
 
 export default function PhonemePage() {
   const { t } = useTranslation('phoneme');
