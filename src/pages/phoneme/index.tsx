@@ -76,8 +76,7 @@ export default function PhonemePage() {
       .finally(() => {
         // always executed
       });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [filterName, phonemeService, table.order, table.orderBy]);
 
   // https://18.react.dev/reference/react/useEffect
   useEffect(() => {
@@ -143,8 +142,8 @@ export default function PhonemePage() {
                   }
                   headLabel={[
                     { id: 'name', label: i18n.name },
-                    { id: 'company', label: i18n.symbol },
-                    { id: 'role', label: i18n.type },
+                    { id: 'symbol', label: i18n.symbol },
+                    { id: 'type', label: i18n.type },
                     { id: '' },
                   ]}
                 />
