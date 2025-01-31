@@ -11,8 +11,6 @@ import MenuItem, { menuItemClasses } from '@mui/material/MenuItem';
 
 import { Iconify } from 'src/components/iconify';
 
-// ----------------------------------------------------------------------
-
 export type UserProps = {
   id: string;
   name: string;
@@ -27,13 +25,13 @@ export type PhonemeProps = {
   symbol: string;
 };
 
-type UserTableRowProps<T> = {
-  row: T;
+type UserTableRowProps = {
+  rows: JSX.Element[];
   selected: boolean;
   onSelectRow: () => void;
 };
 
-export function UserTableRow({ row, selected, onSelectRow }: UserTableRowProps<any>) {
+export function UseTableRow({ rows, selected, onSelectRow }: UserTableRowProps) {
   const { t } = useTranslation('phoneme');
 
   const [openPopover, setOpenPopover] = useState<HTMLButtonElement | null>(null);
@@ -53,9 +51,7 @@ export function UserTableRow({ row, selected, onSelectRow }: UserTableRowProps<a
           <Checkbox disableRipple checked={selected} onChange={onSelectRow} />
         </TableCell>
 
-        {Object.keys(row).map((key) => (
-          <TableCell>{row[key]}</TableCell>
-        ))}
+        {rows}
 
         <TableCell align="right">
           <IconButton onClick={handleOpenPopover}>

@@ -11,6 +11,7 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import Table from '@mui/material/Table';
 import Button from '@mui/material/Button';
+import { TableCell } from '@mui/material';
 import TableBody from '@mui/material/TableBody';
 import Typography from '@mui/material/Typography';
 import TableContainer from '@mui/material/TableContainer';
@@ -24,11 +25,11 @@ import { emptyRows, applyFilter, getComparator } from '#/utils/table';
 
 import { Iconify } from '#/components/iconify';
 import { Scrollbar } from '#/components/scrollbar';
-import { TableNoData } from '#/components/table/table-no-data';
-import { UserTableRow } from '#/components/table/table-row';
+import { UseTableRow } from '#/components/table/table-row';
 import { UserTableHead } from '#/components/table/table-head';
-import { TableEmptyRows } from '#/components/table/table-empty-rows';
+import { TableNoData } from '#/components/table/table-no-data';
 import { UserTableToolbar } from '#/components/table/table-toolbar';
+import { TableEmptyRows } from '#/components/table/table-empty-rows';
 
 export default function PhonemePage() {
   const { t } = useTranslation('phoneme');
@@ -85,6 +86,8 @@ export default function PhonemePage() {
   }, [handleSubmit]); // ✅ All dependencies declared
 
   const notFound = !dataFiltered.length && !!filterName;
+
+  const rows = (row: any) => Object.keys(row).map((key) => <TableCell>{row[key]}</TableCell>);
 
   return (
     <>
@@ -145,9 +148,9 @@ export default function PhonemePage() {
                       table.page * table.rowsPerPage + table.rowsPerPage
                     )
                     .map((row) => (
-                      <UserTableRow
+                      <UseTableRow
                         key={row.id}
-                        row={row}
+                        rows={rows(row)}
                         selected={table.selected.includes(row.id)}
                         onSelectRow={() => table.onSelectRow(row.id)}
                       />
