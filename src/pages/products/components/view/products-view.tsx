@@ -1,10 +1,11 @@
 import { useState, useCallback } from 'react';
-import { DashboardContent } from '#/_error/layouts/dashboard';
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Pagination from '@mui/material/Pagination';
 import Typography from '@mui/material/Typography';
+
+import { DashboardContent } from '#/theme/layouts/dashboard';
 
 import { _products } from 'src/_mock';
 

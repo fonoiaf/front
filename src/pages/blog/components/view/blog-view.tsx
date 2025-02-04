@@ -1,11 +1,12 @@
 import { useState, useCallback } from 'react';
-import { DashboardContent } from '#/_error/layouts/dashboard';
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Pagination from '@mui/material/Pagination';
+
+import { DashboardContent } from '#/theme/layouts/dashboard';
 
 import { _posts } from 'src/_mock';
 import { Iconify } from 'src/components/iconify';

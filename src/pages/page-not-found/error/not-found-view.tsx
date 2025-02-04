@@ -1,9 +1,9 @@
-import { SimpleLayout } from '#/_error/layouts/simple';
-
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+
+import { SimpleLayout } from '#/theme/layouts/simple';
 
 import { RouterLink } from 'src/components/router-link';
 

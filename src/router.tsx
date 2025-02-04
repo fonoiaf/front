@@ -1,7 +1,8 @@
 import { lazy, Suspense } from 'react';
-import { AuthLayout } from '#/_error/layouts/auth';
-import { DashboardLayout } from '#/_error/layouts/dashboard';
 import { Outlet, Navigate, useRoutes } from 'react-router-dom';
+
+import { AuthLayout } from '#/theme/layouts/auth';
+import { DashboardLayout } from '#/theme/layouts/dashboard';
 
 import { Fallback } from '#/components/fallback';
 
