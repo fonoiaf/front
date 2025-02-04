@@ -5,8 +5,10 @@ import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import Typography from '@mui/material/Typography';
 
-import { varAlpha } from 'src/theme/styles';
-import { Iconify } from 'src/components/iconify';
+import { varAlpha } from '#/utils/styles';
+
+import { Iconify } from '#/components/iconify';
+
 import { fShortenNumber } from 'src/utils/format-number';
 
 // ----------------------------------------------------------------------

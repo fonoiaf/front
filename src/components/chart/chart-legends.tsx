@@ -25,6 +25,7 @@ export const StyledDot = styled(Box)(() => ({
   alignItems: 'center',
   justifyContent: 'center',
   backgroundColor: 'currentColor',
+  component: 'span',
 }));
 
 // ----------------------------------------------------------------------
@@ -58,7 +59,8 @@ export function ChartLegends({
                 {icons?.[index]}
               </Box>
             ) : (
-              <StyledDot component="span" sx={{ color: colors[index] }} />
+              // <StyledDot component="span" sx={{ color: colors[index] }} />
+              <StyledDot sx={{ color: colors[index] }} />
             )}
 
             <Box component="span" sx={{ flexShrink: 0 }}>

@@ -33,7 +33,12 @@ export type DashboardLayoutProps = {
 };
 
 export function DashboardLayout({ sx, children, header }: DashboardLayoutProps) {
+  console.log('BEFORE');
+
   const theme = useTheme();
+
+  console.log('AFTER');
+  console.log('THEME');
 
   const [navOpen, setNavOpen] = useState(false);
 

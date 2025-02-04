@@ -1,8 +1,9 @@
-import Grid from '@mui/material/Unstable_Grid2';
+import { DashboardContent } from '#/_error/layouts/dashboard';
+
+import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 import { _tasks, _posts, _timeline } from 'src/_mock';
-import { DashboardContent } from 'src/layouts/dashboard';
 
 import { AnalyticsNews } from '../analytics-news';
 import { AnalyticsTasks } from '../analytics-tasks';

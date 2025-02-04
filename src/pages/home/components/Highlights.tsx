@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
+import Grid2 from '@mui/material/Grid2';
+// import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
-// import Grid from '@mui/material/Grid2';
-import Grid from '@mui/material/Unstable_Grid2';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded';
@@ -83,10 +83,11 @@ export default function Highlights() {
             {t('highlights.description')}
           </Typography>
         </Box>
-        <Grid container spacing={2}>
+        <Grid2 container spacing={2}>
+          {/* <Grid container spacing={2}> */}
           {items.map((item, index) => (
-            // <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index}>
-            <Grid xs={12} sm={6} md={4} key={index}>
+            <Grid2 size={{ xs: 12, sm: 6, md: 4 }} key={index}>
+              {/* <Grid xs={12} sm={6} md={4} key={index}> */}
               <Stack
                 direction="column"
                 component={Card}
@@ -110,9 +111,11 @@ export default function Highlights() {
                   </Typography>
                 </div>
               </Stack>
-            </Grid>
+              {/* </Grid> */}
+            </Grid2>
           ))}
-        </Grid>
+        </Grid2>
+        {/* </Grid> */}
       </Container>
     </Box>
   );

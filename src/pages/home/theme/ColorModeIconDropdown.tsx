@@ -1,12 +1,12 @@
 import * as React from 'react';
-import Menu from '@mui6/material/Menu';
-import MenuItem from '@mui6/material/MenuItem';
-import IconButton from '@mui6/material/IconButton';
-import { useColorScheme } from '@mui6/material/styles';
 
-import type { IconButtonOwnProps } from '@mui6/material/IconButton';
+import type { IconButtonOwnProps } from '@mui/material/IconButton';
 
 import Box from '@mui/material/Box';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import IconButton from '@mui/material/IconButton';
+import { useColorScheme } from '@mui/material/styles';
 import DarkModeIcon from '@mui/icons-material/DarkModeRounded';
 import LightModeIcon from '@mui/icons-material/LightModeRounded';
 

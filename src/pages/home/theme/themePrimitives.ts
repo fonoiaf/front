@@ -1,5 +1,9 @@
 import type { PaletteMode } from 'src/models';
-import type { Shadows } from '@mui/material/styles';
+import type { Shadows, ColorSystemOptions } from '@mui/material/styles';
+import type {
+  DefaultColorScheme,
+  ExtendedColorScheme,
+} from '@mui/material/styles/createThemeWithVars';
 
 import { alpha, createTheme } from '@mui/material/styles';
 
@@ -241,32 +245,40 @@ export const getDesignTokens = (mode: PaletteMode) => {
   };
 };
 
-export const colorSchemes = {
+export type ColorSchema2 = Partial<Record<DefaultColorScheme, boolean | ColorSystemOptions>> &
+  (ExtendedColorScheme extends string ? Record<ExtendedColorScheme, ColorSystemOptions> : {});
+
+export const colorSchemes: ColorSchema2 = {
   light: {
     palette: {
       primary: {
+        ...defaultTheme.colorSchemes.light?.palette.primary,
         light: brand[200],
         main: brand[400],
         dark: brand[700],
         contrastText: brand[50],
       },
       info: {
+        ...defaultTheme.colorSchemes.light?.palette.info,
         light: brand[100],
         main: brand[300],
         dark: brand[600],
         contrastText: gray[50],
       },
       warning: {
+        ...defaultTheme.colorSchemes.light?.palette.warning,
         light: orange[300],
         main: orange[400],
         dark: orange[800],
       },
       error: {
+        ...defaultTheme.colorSchemes.light?.palette.error,
         light: red[300],
         main: red[400],
         dark: red[800],
       },
       success: {
+        ...defaultTheme.colorSchemes.light?.palette.success,
         light: green[300],
         main: green[400],
         dark: green[800],
@@ -282,41 +294,46 @@ export const colorSchemes = {
       text: {
         primary: gray[800],
         secondary: gray[600],
-        warning: orange[400],
+        // warning: orange[400],
       },
       action: {
         hover: alpha(gray[200], 0.2),
         selected: `${alpha(gray[200], 0.3)}`,
       },
-      baseShadow:
-        'hsla(220, 30%, 5%, 0.07) 0px 4px 16px 0px, hsla(220, 25%, 10%, 0.07) 0px 8px 16px -5px',
+      // baseShadow:
+      // 'hsla(220, 30%, 5%, 0.07) 0px 4px 16px 0px, hsla(220, 25%, 10%, 0.07) 0px 8px 16px -5px',
     },
   },
   dark: {
     palette: {
       primary: {
+        ...defaultTheme.colorSchemes.dark?.palette.success,
         contrastText: brand[50],
         light: brand[300],
         main: brand[400],
         dark: brand[700],
       },
       info: {
+        ...defaultTheme.colorSchemes.dark?.palette.info,
         contrastText: brand[300],
         light: brand[500],
         main: brand[700],
         dark: brand[900],
       },
       warning: {
+        ...defaultTheme.colorSchemes.dark?.palette.warning,
         light: orange[400],
         main: orange[500],
         dark: orange[700],
       },
       error: {
+        ...defaultTheme.colorSchemes.dark?.palette.error,
         light: red[400],
         main: red[500],
         dark: red[700],
       },
       success: {
+        ...defaultTheme.colorSchemes.dark?.palette.success,
         light: green[400],
         main: green[500],
         dark: green[700],
@@ -337,8 +354,8 @@ export const colorSchemes = {
         hover: alpha(gray[600], 0.2),
         selected: alpha(gray[600], 0.3),
       },
-      baseShadow:
-        'hsla(220, 30%, 5%, 0.7) 0px 4px 16px 0px, hsla(220, 25%, 10%, 0.8) 0px 8px 16px -5px',
+      // baseShadow:
+      // 'hsla(220, 30%, 5%, 0.7) 0px 4px 16px 0px, hsla(220, 25%, 10%, 0.8) 0px 8px 16px -5px',
     },
   },
 };

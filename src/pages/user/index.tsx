@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
+import { DashboardContent } from '#/_error/layouts/dashboard';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
@@ -17,7 +18,6 @@ import { _users } from 'src/_mock';
 import { CONFIG } from 'src/config-global';
 import { Iconify } from 'src/components/iconify';
 import { Scrollbar } from 'src/components/scrollbar';
-import { DashboardContent } from 'src/layouts/dashboard';
 
 import { TableNoData } from './components/table-no-data';
 import { UserTableRow } from './components/user-table-row';

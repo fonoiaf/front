@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 import PhonemeService from '#/services/phoneme-service';
 import { useState, useEffect, useCallback } from 'react';
+import { DashboardContent } from '#/_error/layouts/dashboard';
 
 import type { UserProps } from '#/components/table/table-row';
 
@@ -16,8 +17,6 @@ import TableBody from '@mui/material/TableBody';
 import Typography from '@mui/material/Typography';
 import TableContainer from '@mui/material/TableContainer';
 import TablePagination from '@mui/material/TablePagination';
-
-import { DashboardContent } from '#/layouts/dashboard';
 
 import { useTable } from '#/hooks/use-table';
 

@@ -1,7 +1,5 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
-import IconButton from '@mui6/material/IconButton';
-import { alpha, styled } from '@mui6/material/styles';
 
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
@@ -12,6 +10,8 @@ import Divider from '@mui/material/Divider';
 import MenuItem from '@mui/material/MenuItem';
 import Container from '@mui/material/Container';
 import MenuIcon from '@mui/icons-material/Menu';
+import IconButton from '@mui/material/IconButton';
+import { alpha, styled } from '@mui/material/styles';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 
 import Sitemark from './SitemarkIcon';

@@ -1,5 +1,4 @@
-import { varAlpha } from '#/utils/styles';
-
+import { varAlpha } from '../styles';
 import { grey, info, error, common, primary, success, warning, secondary } from './palette';
 
 // ----------------------------------------------------------------------

@@ -4,7 +4,7 @@ import type { BoxProps } from '@mui/material/Box';
 
 import Box from '@mui/material/Box';
 
-import { varAlpha } from 'src/theme/styles';
+import { varAlpha } from '#/utils/styles';
 
 import type { ColorPreviewProps } from './types';
 

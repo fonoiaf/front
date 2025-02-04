@@ -2,7 +2,7 @@ import type { Theme, Components } from '@mui/material/styles';
 
 import SvgIcon from '@mui/material/SvgIcon';
 
-import { varAlpha } from '#/utils/styles';
+import { varAlpha } from '../styles';
 
 // ----------------------------------------------------------------------
 

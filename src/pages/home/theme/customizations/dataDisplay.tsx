@@ -1,11 +1,11 @@
-import { alpha } from '@mui6/material/styles';
-import { chipClasses } from '@mui6/material/Chip';
-import { svgIconClasses } from '@mui6/material/SvgIcon';
-import { typographyClasses } from '@mui6/material/Typography';
-import { buttonBaseClasses } from '@mui6/material/ButtonBase';
-import { iconButtonClasses } from '@mui6/material/IconButton';
+import type { Theme, Components } from '@mui/material/styles';
 
-import type { Theme, Components } from '@mui6/material/styles';
+import { alpha } from '@mui/material/styles';
+import { chipClasses } from '@mui/material/Chip';
+import { svgIconClasses } from '@mui/material/SvgIcon';
+import { typographyClasses } from '@mui/material/Typography';
+import { buttonBaseClasses } from '@mui/material/ButtonBase';
+import { iconButtonClasses } from '@mui/material/IconButton';
 
 import { red, gray, green } from '../themePrimitives';
 

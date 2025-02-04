@@ -6,11 +6,12 @@ import Card from '@mui/material/Card';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 
-import { varAlpha } from 'src/theme/styles';
-import { fDate } from 'src/utils/format-time';
-import { Iconify } from 'src/components/iconify';
-import { SvgColor } from 'src/components/svg-color';
-import { fShortenNumber } from 'src/utils/format-number';
+import { varAlpha } from '#/utils/styles';
+import { fDate } from '#/utils/format-time';
+import { fShortenNumber } from '#/utils/format-number';
+
+import { Iconify } from '#/components/iconify';
+import { SvgColor } from '#/components/svg-color';
 
 // ----------------------------------------------------------------------
 

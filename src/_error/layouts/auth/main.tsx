@@ -1,10 +1,10 @@
+import { layoutClasses } from '#/_error/layouts/classes';
+
 import type { BoxProps } from '@mui/material/Box';
 import type { Breakpoint } from '@mui/material/styles';
 
 import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
-
-import { layoutClasses } from 'src/layouts/classes';
 
 // ----------------------------------------------------------------------
 
