@@ -2,6 +2,7 @@ import type { BoxProps } from '@mui/material/Box';
 
 import Box from '@mui/material/Box';
 import Badge from '@mui/material/Badge';
+import { useTheme } from '@mui/material/styles';
 
 import { Iconify } from 'src/components/iconify';
 import { RouterLink } from 'src/components/router-link';
@@ -13,6 +14,8 @@ type Props = BoxProps & {
 };
 
 export function CartIcon({ totalItems, sx, ...other }: Props) {
+  const theme = useTheme();
+
   return (
     <Box
       component={RouterLink}
@@ -28,9 +31,9 @@ export function CartIcon({ totalItems, sx, ...other }: Props) {
         borderTopLeftRadius: 16,
         borderBottomLeftRadius: 16,
         bgcolor: 'background.paper',
-        padding: (theme) => theme.spacing(1, 3, 1, 2),
-        boxShadow: (theme) => theme.customShadows.dropdown,
-        transition: (theme) => theme.transitions.create(['opacity']),
+        padding: theme.spacing(1, 3, 1, 2),
+        boxShadow: theme.customShadows.dropdown,
+        transition: theme.transitions.create(['opacity']),
         '&:hover': { opacity: 0.72 },
         ...sx,
       }}

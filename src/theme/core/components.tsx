@@ -9,7 +9,8 @@ import { varAlpha } from '#/utils/styles';
 const MuiBackdrop: Components<Theme>['MuiBackdrop'] = {
   styleOverrides: {
     root: ({ theme }) => ({
-      backgroundColor: varAlpha(theme.vars.palette.grey['900Channel'], 0.8),
+      backgroundColor: varAlpha(theme.vars.palette.grey['900'], 0.8),
+      // backgroundColor: varAlpha(theme.vars.palette.grey['900Channel'], 0.8),
     }),
     invisible: {
       background: 'transparent',
@@ -62,7 +63,8 @@ const MuiCardHeader: Components<Theme>['MuiCardHeader'] = {
 const MuiOutlinedInput: Components<Theme>['MuiOutlinedInput'] = {
   styleOverrides: {
     notchedOutline: ({ theme }) => ({
-      borderColor: varAlpha(theme.vars.palette.grey['500Channel'], 0.2),
+      borderColor: varAlpha(theme.vars.palette.grey['500'], 0.2),
+      // borderColor: varAlpha(theme.vars.palette.grey['500Channel'], 0.2),
     }),
   },
 };
@@ -74,7 +76,8 @@ const MuiPaper: Components<Theme>['MuiPaper'] = {
   styleOverrides: {
     root: { backgroundImage: 'none' },
     outlined: ({ theme }) => ({
-      borderColor: varAlpha(theme.vars.palette.grey['500Channel'], 0.16),
+      borderColor: varAlpha(theme.vars.palette.grey['500'], 0.16),
+      // borderColor: varAlpha(theme.vars.palette.grey['500Channel'], 0.16),
     }),
   },
 };

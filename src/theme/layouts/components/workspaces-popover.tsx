@@ -6,6 +6,7 @@ import type { ButtonBaseProps } from '@mui/material/ButtonBase';
 import Box from '@mui/material/Box';
 import Popover from '@mui/material/Popover';
 import MenuList from '@mui/material/MenuList';
+import { useTheme } from '@mui/material/styles';
 import ButtonBase from '@mui/material/ButtonBase';
 import MenuItem, { menuItemClasses } from '@mui/material/MenuItem';
 
@@ -24,8 +25,8 @@ export type WorkspacesPopoverProps = ButtonBaseProps & {
 };
 
 export function WorkspacesPopover({ data = [], sx, ...other }: WorkspacesPopoverProps) {
+  const theme = useTheme();
   const [workspace, setWorkspace] = useState(data[0]);
-
   const [openPopover, setOpenPopover] = useState<HTMLButtonElement | null>(null);
 
   const handleOpenPopover = useCallback((event: React.MouseEvent<HTMLButtonElement>) => {
@@ -66,7 +67,8 @@ export function WorkspacesPopover({ data = [], sx, ...other }: WorkspacesPopover
           borderRadius: 1.5,
           textAlign: 'left',
           justifyContent: 'flex-start',
-          bgcolor: (theme) => varAlpha(theme.vars.palette.grey['500Channel'], 0.08),
+          bgcolor: varAlpha(theme.vars.palette.grey['500'], 0.08),
+          // bgcolor: (theme) => varAlpha(theme.vars.palette.grey['500Channel'], 0.08),
           ...sx,
         }}
         {...other}

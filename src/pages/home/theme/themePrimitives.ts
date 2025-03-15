@@ -245,6 +245,8 @@ export const getDesignTokens = (mode: PaletteMode) => {
   };
 };
 
+console.log('DEFAULT', createTheme());
+
 export type ColorSchema2 = Partial<Record<DefaultColorScheme, boolean | ColorSystemOptions>> &
   (ExtendedColorScheme extends string ? Record<ExtendedColorScheme, ColorSystemOptions> : {});
 
@@ -252,33 +254,38 @@ export const colorSchemes: ColorSchema2 = {
   light: {
     palette: {
       primary: {
-        ...defaultTheme.colorSchemes.light?.palette.primary,
+        // ...defaultTheme.colorSchemes.light?.palette.primary,
+        ...defaultTheme.palette.primary,
         light: brand[200],
         main: brand[400],
         dark: brand[700],
         contrastText: brand[50],
       },
       info: {
-        ...defaultTheme.colorSchemes.light?.palette.info,
+        // ...defaultTheme.colorSchemes?.light?.palette?.info,
+        ...defaultTheme.palette.info,
         light: brand[100],
         main: brand[300],
         dark: brand[600],
         contrastText: gray[50],
       },
       warning: {
-        ...defaultTheme.colorSchemes.light?.palette.warning,
+        // ...defaultTheme.colorSchemes?.light?.palette?.warning,
+        ...defaultTheme.palette.warning,
         light: orange[300],
         main: orange[400],
         dark: orange[800],
       },
       error: {
-        ...defaultTheme.colorSchemes.light?.palette.error,
+        // ...defaultTheme.colorSchemes?.light?.palette?.error,
+        ...defaultTheme.palette.error,
         light: red[300],
         main: red[400],
         dark: red[800],
       },
       success: {
-        ...defaultTheme.colorSchemes.light?.palette.success,
+        // ...defaultTheme.colorSchemes?.light?.palette?.success,
+        ...defaultTheme.palette.success,
         light: green[300],
         main: green[400],
         dark: green[800],
@@ -307,33 +314,33 @@ export const colorSchemes: ColorSchema2 = {
   dark: {
     palette: {
       primary: {
-        ...defaultTheme.colorSchemes.dark?.palette.success,
+        ...defaultTheme.colorSchemes?.dark?.palette?.success,
         contrastText: brand[50],
         light: brand[300],
         main: brand[400],
         dark: brand[700],
       },
       info: {
-        ...defaultTheme.colorSchemes.dark?.palette.info,
+        ...defaultTheme.colorSchemes?.dark?.palette?.info,
         contrastText: brand[300],
         light: brand[500],
         main: brand[700],
         dark: brand[900],
       },
       warning: {
-        ...defaultTheme.colorSchemes.dark?.palette.warning,
+        ...defaultTheme.colorSchemes?.dark?.palette?.warning,
         light: orange[400],
         main: orange[500],
         dark: orange[700],
       },
       error: {
-        ...defaultTheme.colorSchemes.dark?.palette.error,
+        ...defaultTheme.colorSchemes?.dark?.palette?.error,
         light: red[400],
         main: red[500],
         dark: red[700],
       },
       success: {
-        ...defaultTheme.colorSchemes.dark?.palette.success,
+        ...defaultTheme.colorSchemes?.dark?.palette?.success,
         light: green[400],
         main: green[500],
         dark: green[700],
@@ -363,49 +370,49 @@ export const colorSchemes: ColorSchema2 = {
 export const typography = {
   fontFamily: ['"Inter", "sans-serif"'].join(','),
   h1: {
-    fontSize: defaultTheme.typography.pxToRem(48),
+    fontSize: defaultTheme.typography?.pxToRem(48),
     fontWeight: 600,
     lineHeight: 1.2,
     letterSpacing: -0.5,
   },
   h2: {
-    fontSize: defaultTheme.typography.pxToRem(36),
+    fontSize: defaultTheme.typography?.pxToRem(36),
     fontWeight: 600,
     lineHeight: 1.2,
   },
   h3: {
-    fontSize: defaultTheme.typography.pxToRem(30),
+    fontSize: defaultTheme.typography?.pxToRem(30),
     lineHeight: 1.2,
   },
   h4: {
-    fontSize: defaultTheme.typography.pxToRem(24),
+    fontSize: defaultTheme.typography?.pxToRem(24),
     fontWeight: 600,
     lineHeight: 1.5,
   },
   h5: {
-    fontSize: defaultTheme.typography.pxToRem(20),
+    fontSize: defaultTheme.typography?.pxToRem(20),
     fontWeight: 600,
   },
   h6: {
-    fontSize: defaultTheme.typography.pxToRem(18),
+    fontSize: defaultTheme.typography?.pxToRem(18),
     fontWeight: 600,
   },
   subtitle1: {
-    fontSize: defaultTheme.typography.pxToRem(18),
+    fontSize: defaultTheme.typography?.pxToRem(18),
   },
   subtitle2: {
-    fontSize: defaultTheme.typography.pxToRem(14),
+    fontSize: defaultTheme.typography?.pxToRem(14),
     fontWeight: 500,
   },
   body1: {
-    fontSize: defaultTheme.typography.pxToRem(14),
+    fontSize: defaultTheme.typography?.pxToRem(14),
   },
   body2: {
-    fontSize: defaultTheme.typography.pxToRem(14),
+    fontSize: defaultTheme.typography?.pxToRem(14),
     fontWeight: 400,
   },
   caption: {
-    fontSize: defaultTheme.typography.pxToRem(12),
+    fontSize: defaultTheme.typography?.pxToRem(12),
     fontWeight: 400,
   },
 };

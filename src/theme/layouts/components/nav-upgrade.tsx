@@ -4,11 +4,14 @@ import type { StackProps } from '@mui/material/Stack';
 
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 
 // ----------------------------------------------------------------------
 
 export function NavUpgrade({ sx, ...other }: StackProps) {
+  const theme = useTheme();
+
   return (
     <Box
       display="flex"
@@ -19,11 +22,11 @@ export function NavUpgrade({ sx, ...other }: StackProps) {
     >
       <Typography
         variant="h6"
-        sx={(theme) => ({
+        sx={{
           ...textGradient(
             `to right, ${theme.vars.palette.secondary.main}, ${theme.vars.palette.warning.main}`
           ),
-        })}
+        }}
       >
         More features?
       </Typography>

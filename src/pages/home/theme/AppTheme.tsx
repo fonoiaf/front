@@ -8,7 +8,7 @@ import { inputsCustomizations } from './customizations/inputs';
 import { feedbackCustomizations } from './customizations/feedback';
 import { surfacesCustomizations } from './customizations/surfaces';
 import { navigationCustomizations } from './customizations/navigation';
-import { dataDisplayCustomizations } from './customizations/dataDisplay';
+import { dataDisplayCustomizations } from './customizations/components';
 import { shape, shadows, typography, colorSchemes } from './themePrimitives';
 
 interface AppThemeProps {

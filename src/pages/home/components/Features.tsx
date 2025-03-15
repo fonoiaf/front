@@ -5,9 +5,9 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import MuiChip from '@mui/material/Chip';
 import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
+import { styled, useTheme } from '@mui/material/styles';
 import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
 import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
 import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
@@ -72,6 +72,8 @@ export function MobileLayout({
   handleItemClick,
   selectedFeature,
 }: MobileLayoutProps) {
+  const theme = useTheme();
+
   if (!items[selectedItemIndex]) {
     return null;
   }
@@ -97,7 +99,7 @@ export function MobileLayout({
       </Box>
       <Card variant="outlined">
         <Box
-          sx={(theme) => ({
+          sx={{
             mb: 2,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
@@ -106,7 +108,7 @@ export function MobileLayout({
             ...theme.applyStyles('dark', {
               backgroundImage: 'var(--items-imageDark)',
             }),
-          })}
+          }}
           style={
             items[selectedItemIndex]
               ? ({
@@ -130,6 +132,7 @@ export function MobileLayout({
 }
 
 export default function Features() {
+  const theme = useTheme();
   const { t } = useTranslation('home');
   const [selectedItemIndex, setSelectedItemIndex] = React.useState(0);
 
@@ -171,14 +174,14 @@ export default function Features() {
                 component={Button}
                 onClick={() => handleItemClick(index)}
                 sx={[
-                  (theme) => ({
+                  {
                     p: 2,
                     height: '100%',
                     width: '100%',
                     '&:hover': {
                       backgroundColor: theme.palette.action.hover,
                     },
-                  }),
+                  },
                   selectedItemIndex === index && {
                     backgroundColor: 'action.selected',
                   },
@@ -232,7 +235,7 @@ export default function Features() {
             }}
           >
             <Box
-              sx={(theme) => ({
+              sx={{
                 m: 'auto',
                 width: 420,
                 height: 500,
@@ -241,7 +244,7 @@ export default function Features() {
                 ...theme.applyStyles('dark', {
                   backgroundImage: 'var(--items-imageDark)',
                 }),
-              })}
+              }}
               style={
                 items[selectedItemIndex]
                   ? ({

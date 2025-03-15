@@ -3,7 +3,9 @@ import type { Theme } from '@mui/material/styles';
 import type {} from '@mui/material/themeCssVarsAugmentation';
 
 import CssBaseline from '@mui/material/CssBaseline';
-import { extendTheme, ThemeProvider } from '@mui/material/styles';
+import { extendTheme, ThemeProvider, shouldSkipGeneratingVar } from '@mui/material/styles';
+
+import { shadows, components, typography, colorSchemes, customShadows } from './core';
 
 // ----------------------------------------------------------------------
 
@@ -24,14 +26,14 @@ export default function CustomTheme({ children }: Props) {
 
 export function createTheme(): Theme {
   const initialTheme = {
-    // colorSchemes,
-    // shadows: shadows(),
-    // customShadows: customShadows(),
+    colorSchemes,
+    shadows: shadows(),
+    customShadows: customShadows(),
     shape: { borderRadius: 8 },
-    // components,
-    // typography,
-    // cssVarPrefix: '',
-    // shouldSkipGeneratingVar,
+    components,
+    typography,
+    cssVarPrefix: '',
+    shouldSkipGeneratingVar,
   };
 
   const theme = extendTheme(initialTheme);

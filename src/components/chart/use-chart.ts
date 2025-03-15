@@ -269,7 +269,8 @@ export function useChart(options?: ChartOptions): ChartOptions {
         track: {
           margin: -8,
           strokeWidth: '50%',
-          background: varAlpha(theme.vars.palette.grey['500Channel'], 0.16),
+          background: varAlpha(theme.vars.palette.grey['500'], 0.16),
+          // background: varAlpha(theme.vars.palette.grey['500Channel'], 0.16),
           ...options?.plotOptions?.radialBar?.track,
         },
         dataLabels: {

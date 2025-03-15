@@ -5,7 +5,7 @@ import type { BoxProps } from '@mui/material/Box';
 import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 import ButtonBase from '@mui/material/ButtonBase';
-import { alpha as hexAlpha } from '@mui/material/styles';
+import { alpha as hexAlpha, useTheme } from '@mui/material/styles';
 
 import { varAlpha } from '#/utils/styles';
 
@@ -15,6 +15,7 @@ import type { ColorPickerProps } from './types';
 
 export const ColorPicker = forwardRef<HTMLDivElement, BoxProps & ColorPickerProps>(
   ({ colors, selected, onSelectColor, limit = 'auto', sx, slotProps, ...other }, ref) => {
+    const theme = useTheme();
     const singleSelect = typeof selected === 'string';
 
     const handleSelect = useCallback(
@@ -68,12 +69,13 @@ export const ColorPicker = forwardRef<HTMLDivElement, BoxProps & ColorPickerProp
                 <Stack
                   alignItems="center"
                   justifyContent="center"
-                  sx={(theme) => ({
+                  sx={{
                     width: 20,
                     height: 20,
                     bgcolor: color,
                     borderRadius: '50%',
-                    border: `solid 1px ${varAlpha(theme.vars.palette.grey['500Channel'], 0.16)}`,
+                    border: `solid 1px ${varAlpha(theme.vars.palette.grey['500'], 0.16)}`,
+                    // border: `solid 1px ${varAlpha(theme.vars.palette.grey['500Channel'], 0.16)}`,
                     ...(hasSelected && {
                       transform: 'scale(1.3)',
                       boxShadow: `4px 4px 8px 0 ${hexAlpha(color, 0.48)}`,
@@ -82,17 +84,17 @@ export const ColorPicker = forwardRef<HTMLDivElement, BoxProps & ColorPickerProp
                         duration: theme.transitions.duration.shortest,
                       }),
                     }),
-                  })}
+                  }}
                 >
                   <Iconify
                     width={hasSelected ? 12 : 0}
                     icon="eva:checkmark-fill"
-                    sx={(theme) => ({
+                    sx={{
                       color: theme.palette.getContrastText(color),
                       transition: theme.transitions.create('all', {
                         duration: theme.transitions.duration.shortest,
                       }),
-                    })}
+                    }}
                   />
                 </Stack>
               </ButtonBase>

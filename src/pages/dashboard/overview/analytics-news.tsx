@@ -12,6 +12,7 @@ import ListItemText from '@mui/material/ListItemText';
 import { fToNow } from 'src/utils/format-time';
 import { Iconify } from 'src/components/iconify';
 import { Scrollbar } from 'src/components/scrollbar';
+import { useTheme } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
@@ -51,6 +52,8 @@ export function AnalyticsNews({ title, subheader, list, ...other }: Props) {
 // ----------------------------------------------------------------------
 
 function PostItem({ sx, item, ...other }: BoxProps & { item: Props['list'][number] }) {
+  const theme = useTheme();
+
   return (
     <Box
       sx={{
@@ -59,7 +62,7 @@ function PostItem({ sx, item, ...other }: BoxProps & { item: Props['list'][numbe
         gap: 2,
         display: 'flex',
         alignItems: 'center',
-        borderBottom: (theme) => `dashed 1px ${theme.vars.palette.divider}`,
+        borderBottom: `dashed 1px ${theme.vars.palette.divider}`,
         ...sx,
       }}
       {...other}

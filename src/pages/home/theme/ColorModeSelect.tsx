@@ -8,9 +8,11 @@ import { useColorScheme } from '@mui/material/styles';
 
 export default function ColorModeSelect(props: SelectProps) {
   const { mode, setMode } = useColorScheme();
+
   if (!mode) {
     return null;
   }
+
   return (
     <Select
       value={mode}

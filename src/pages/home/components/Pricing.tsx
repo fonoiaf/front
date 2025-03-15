@@ -9,6 +9,7 @@ import Grid2 from '@mui/material/Grid2';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
 import Container from '@mui/material/Container';
+import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -16,6 +17,7 @@ import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 
 export default function Pricing() {
+  const theme = useTheme();
   const { t } = useTranslation('home');
 
   const tiers = [
@@ -106,18 +108,17 @@ export default function Pricing() {
                   flexDirection: 'column',
                   gap: 4,
                 },
-                tier.title === 'Professional' &&
-                  ((theme) => ({
-                    border: 'none',
+                tier.title === 'Professional' && {
+                  border: 'none',
+                  background:
+                    'radial-gradient(circle at 50% 0%, hsl(220, 20%, 35%), hsl(220, 30%, 6%))',
+                  boxShadow: `0 8px 12px hsla(220, 20%, 42%, 0.2)`,
+                  ...theme.applyStyles('dark', {
                     background:
-                      'radial-gradient(circle at 50% 0%, hsl(220, 20%, 35%), hsl(220, 30%, 6%))',
-                    boxShadow: `0 8px 12px hsla(220, 20%, 42%, 0.2)`,
-                    ...theme.applyStyles('dark', {
-                      background:
-                        'radial-gradient(circle at 50% 0%, hsl(220, 20%, 20%), hsl(220, 30%, 16%))',
-                      boxShadow: `0 8px 12px hsla(0, 0%, 0%, 0.8)`,
-                    }),
-                  })),
+                      'radial-gradient(circle at 50% 0%, hsl(220, 20%, 20%), hsl(220, 30%, 16%))',
+                    boxShadow: `0 8px 12px hsla(0, 0%, 0%, 0.8)`,
+                  }),
+                },
               ]}
             >
               <CardContent>
