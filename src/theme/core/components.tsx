@@ -1,6 +1,7 @@
 import type { Theme, Components } from '@mui/material/styles';
 
 import SvgIcon from '@mui/material/SvgIcon';
+import { createTheme } from '@mui/material/styles';
 
 import { varAlpha } from '#/utils/styles';
 
@@ -160,17 +161,36 @@ const MuiRadio: Components<Theme>['MuiRadio'] = {
 
 // ----------------------------------------------------------------------
 
-export const components = {
-  MuiCard,
-  MuiLink,
-  MuiPaper,
-  MuiRadio,
-  MuiButton,
-  MuiBackdrop,
-  MuiMenuItem,
-  MuiCheckbox,
-  MuiTableCell,
-  MuiCardHeader,
-  MuiOutlinedInput,
-  MuiFormControlLabel,
-};
+const theme = createTheme({
+  components: {
+    MuiCard,
+    MuiLink,
+    MuiPaper,
+    MuiRadio,
+    MuiButton,
+    MuiBackdrop,
+    MuiMenuItem,
+    MuiCheckbox,
+    MuiTableCell,
+    MuiCardHeader,
+    MuiOutlinedInput,
+    MuiFormControlLabel,
+  },
+});
+
+// const comp: Pick<typeof theme, 'components'> = {
+//   MuiCard,
+//   MuiLink,
+//   MuiPaper,
+//   MuiRadio,
+//   MuiButton,
+//   MuiBackdrop,
+//   MuiMenuItem,
+//   MuiCheckbox,
+//   MuiTableCell,
+//   MuiCardHeader,
+//   MuiOutlinedInput,
+//   MuiFormControlLabel,
+// };
+
+export default { ...theme.components };

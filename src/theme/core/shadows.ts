@@ -6,7 +6,7 @@ import { grey } from './palette';
 
 // ----------------------------------------------------------------------
 
-export function shadows(): Shadows {
+export default function shadows(): Shadows {
   const colorChannel = grey['500Channel'];
 
   const color1 = varAlpha(colorChannel, 0.2);

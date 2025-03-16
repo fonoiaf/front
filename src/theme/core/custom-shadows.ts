@@ -2,48 +2,9 @@ import { varAlpha } from '#/utils/styles';
 
 import { grey, info, error, common, primary, success, warning, secondary } from './palette';
 
-// ----------------------------------------------------------------------
+const createShadowColor = (colorChannel: string) => `0 8px 16px 0 ${varAlpha(colorChannel, 0.24)}`;
 
-export interface CustomShadows {
-  z1?: string;
-  z4?: string;
-  z8?: string;
-  z12?: string;
-  z16?: string;
-  z20?: string;
-  z24?: string;
-  //
-  primary?: string;
-  secondary?: string;
-  info?: string;
-  success?: string;
-  warning?: string;
-  error?: string;
-  //
-  card?: string;
-  dialog?: string;
-  dropdown?: string;
-}
-
-declare module '@mui/material/styles' {
-  interface Theme {
-    customShadows: CustomShadows;
-  }
-  interface ThemeOptions {
-    customShadows?: CustomShadows;
-  }
-  interface ThemeVars {
-    customShadows: CustomShadows;
-  }
-}
-
-// ----------------------------------------------------------------------
-
-export function createShadowColor(colorChannel: string) {
-  return `0 8px 16px 0 ${varAlpha(colorChannel, 0.24)}`;
-}
-
-export function customShadows() {
+export default function customShadows() {
   const colorChannel = grey['500Channel'];
 
   return {

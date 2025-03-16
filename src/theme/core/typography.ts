@@ -1,34 +1,20 @@
-import type { TypographyOptions } from '@mui/material/styles/createTypography';
+import type { Typography } from '@mui/material/styles/createTypography';
 
 import { setFont, pxToRem, responsiveFontSizes } from '#/utils/styles';
 
 // ----------------------------------------------------------------------
 
-declare module '@mui/material/styles' {
-  interface TypographyVariants {
-    fontSecondaryFamily: React.CSSProperties['fontFamily'];
-    fontWeightSemiBold: React.CSSProperties['fontWeight'];
-  }
-  interface TypographyVariantsOptions {
-    fontSecondaryFamily?: React.CSSProperties['fontFamily'];
-    fontWeightSemiBold?: React.CSSProperties['fontWeight'];
-  }
-  interface ThemeVars {
-    typography: Theme['typography'];
-  }
-}
-
-// ----------------------------------------------------------------------
-
 export const defaultFont = 'DM Sans Variable';
-
 export const primaryFont = setFont(defaultFont);
-
 export const secondaryFont = setFont('Barlow');
 
 // ----------------------------------------------------------------------
 
-export const typography: TypographyOptions = {
+export const typography: Typography = {
+  pxToRem: (size: number) => `${size / 16}rem`,
+  fontSize: 14,
+  htmlFontSize: 14,
+
   fontFamily: primaryFont,
   fontSecondaryFamily: secondaryFont,
   fontWeightLight: '300',
