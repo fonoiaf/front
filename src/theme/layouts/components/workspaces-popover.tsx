@@ -68,8 +68,9 @@ export function WorkspacesPopover({ data = [], sx, ...other }: WorkspacesPopover
           borderRadius: 1.5,
           textAlign: 'left',
           justifyContent: 'flex-start',
-          bgcolor: varAlpha(theme.vars.palette.grey['500'], 0.08),
-          // bgcolor: (theme) => varAlpha(theme.vars.palette.grey['500Channel'], 0.08),
+          bgcolor: varAlpha((theme.vars || theme).palette.grey['500Channel'], 0.08),
+          // bgcolor: varAlpha((theme.vars || theme).palette.grey['500'], 0.08),
+          // bgcolor: (theme) => varAlpha((theme.vars || theme).palette.grey['500Channel'], 0.08),
           ...sx,
         }}
         {...other}

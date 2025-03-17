@@ -62,7 +62,7 @@ function PostItem({ sx, item, ...other }: BoxProps & { item: Props['list'][numbe
         gap: 2,
         display: 'flex',
         alignItems: 'center',
-        borderBottom: `dashed 1px ${theme.vars.palette.divider}`,
+        borderBottom: `dashed 1px ${(theme.vars || theme).palette.divider}`,
         ...sx,
       }}
       {...other}

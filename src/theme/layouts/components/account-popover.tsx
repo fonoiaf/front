@@ -59,7 +59,7 @@ export function AccountPopover({ data = [], sx, ...other }: AccountPopoverProps)
           p: '2px',
           width: 40,
           height: 40,
-          background: `conic-gradient(${theme.vars.palette.primary.light}, ${theme.vars.palette.warning.light}, ${theme.vars.palette.primary.light})`,
+          background: `conic-gradient(${(theme.vars || theme).palette.primary.light}, ${(theme.vars || theme).palette.warning.light}, ${(theme.vars || theme).palette.primary.light})`,
           ...sx,
         }}
         {...other}

@@ -37,8 +37,8 @@ declare module '@mui/material/styles/createThemeNoVars' {
 const MuiBackdrop: Components<BaseThemeDefault>['MuiBackdrop'] = {
   styleOverrides: {
     root: ({ theme }) => ({
-      backgroundColor: varAlpha(theme.palette.grey['900'], 0.8),
-      // backgroundColor: varAlpha(theme.vars.palette.grey['900Channel'], 0.8),
+      // backgroundColor: varAlpha(theme.palette.grey['900'], 0.8),
+      backgroundColor: varAlpha((theme.vars || theme).palette.grey['900Channel'], 0.8),
     }),
     invisible: {
       background: 'transparent',
@@ -91,8 +91,9 @@ const MuiCardHeader: Components<BaseThemeDefault>['MuiCardHeader'] = {
 const MuiOutlinedInput: Components<BaseThemeDefault>['MuiOutlinedInput'] = {
   styleOverrides: {
     notchedOutline: ({ theme }) => ({
-      borderColor: varAlpha(theme.palette.grey['500'], 0.2),
-      // borderColor: varAlpha(theme.vars.palette.grey['500Channel'], 0.2),
+      // borderColor: varAlpha(theme.palette.grey['500'], 0.2),
+      // borderColor: varAlpha((theme.vars || theme).palette.grey['500Channel'], 0.2),
+      borderColor: varAlpha(theme.palette.grey['500Channel'], 0.2),
     }),
   },
 };
@@ -104,8 +105,9 @@ const MuiPaper: Components<BaseThemeDefault>['MuiPaper'] = {
   styleOverrides: {
     root: { backgroundImage: 'none' },
     outlined: ({ theme }) => ({
-      borderColor: varAlpha(theme.palette.grey['500'], 0.16),
-      // borderColor: varAlpha(theme.vars.palette.grey['500Channel'], 0.16),
+      // borderColor: varAlpha(theme.palette.grey['500'], 0.16),
+      // borderColor: varAlpha((theme.vars || theme).palette.grey['500Channel'], 0.16),
+      borderColor: varAlpha(theme.palette.grey['500Channel'], 0.16),
     }),
   },
 };

@@ -23,7 +23,7 @@ export function NavUpgrade({ sx, ...other }: StackProps) {
         variant="h6"
         sx={{
           ...textGradient(
-            `to right, ${theme.vars.palette.secondary.main}, ${theme.vars.palette.warning.main}`
+            `to right, ${(theme.vars || theme).palette.secondary.main}, ${(theme.vars || theme).palette.warning.main}`
           ),
         }}
       >

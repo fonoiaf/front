@@ -48,8 +48,8 @@ export function PostSort({ options, sortBy, onSort, sx, ...other }: PostSortProp
           />
         }
         sx={{
-          bgcolor: varAlpha(theme.vars.palette.grey['500'], 0.08),
-          // bgcolor: (theme) => varAlpha(theme.vars.palette.grey['500Channel'], 0.08),
+          // bgcolor: varAlpha((theme.vars || theme).palette.grey['500'], 0.08),
+          bgcolor: varAlpha((theme.vars || theme).palette.grey['500Channel'], 0.08),
           ...sx,
         }}
         {...other}

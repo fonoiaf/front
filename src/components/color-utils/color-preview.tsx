@@ -37,8 +37,8 @@ export const ColorPreview = forwardRef<HTMLDivElement, BoxProps & ColorPreviewPr
               height: 16,
               bgcolor: color,
               borderRadius: '50%',
-              border: `solid 2px ${theme.vars.palette.background.paper}`,
-              boxShadow: `inset -1px 1px 2px ${varAlpha(theme.vars.palette.common.blackChannel, 0.24)}`,
+              border: `solid 2px ${(theme.vars || theme).palette.background.paper}`,
+              boxShadow: `inset -1px 1px 2px ${varAlpha((theme.vars || theme).palette.common.blackChannel, 0.24)}`,
             }}
           />
         ))}
