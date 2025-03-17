@@ -21,6 +21,17 @@ export default function coreTheme(): Theme {
     shape: customShape(),
     colorSchemes: {
       ...customColorsJson,
+      light: {
+        palette: {
+          mode: 'light',
+        },
+      },
+
+      dark: {
+        palette: {
+          mode: 'dark',
+        },
+      },
       // custom: {
       //   palette: {},
       //   opacity: {},
