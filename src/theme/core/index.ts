@@ -1,6 +1,6 @@
 import type { Theme, CssVarsThemeOptions } from '@mui/material/styles';
 
-import { extendTheme } from '@mui/material/styles';
+import { extendTheme, createTheme } from '@mui/material/styles';
 
 import shadows from './shadows';
 import customShape from './shape';
@@ -48,9 +48,38 @@ export default function coreTheme(): Theme {
     shouldSkipGeneratingVar: customShouldSkipGeneratingVar,
   };
 
-  const theme = extendTheme(initialTheme);
+  // const theme = extendTheme(initialTheme);
+  const customTheme = createTheme({
+    // cssVarPrefix: '',
+    shadows: shadows(),
+    shape: customShape(),
+    colorSchemes: {
+      ...customColorsJson,
+      light: {
+        palette: {
+          mode: 'light',
+        },
+      },
 
-  return theme;
+      dark: {
+        palette: {
+          mode: 'dark',
+        },
+      },
+    },
+
+    defaultColorScheme: 'light',
+
+    // colorSchemes: customColors(),
+    typography: customTypography(),
+    components: customComponents(),
+    customShadows: customShadows(),
+    
+    // shouldSkipGeneratingVar: customShouldSkipGeneratingVar,
+  });
+
+  // return theme;
+  return customTheme;
 }
 
 // ----------------------------------------------------------------------
