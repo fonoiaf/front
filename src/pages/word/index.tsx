@@ -79,7 +79,7 @@ export default function WordPage() {
       <DashboardContent>
         <Box display="flex" alignItems="center" mb={5}>
           <Typography variant="h4" flexGrow={1}>
-            {t('title')}
+            Palavras
           </Typography>
           <Button
             variant="contained"

@@ -79,7 +79,7 @@ export default function PatientPage() {
       <DashboardContent>
         <Box display="flex" alignItems="center" mb={5}>
           <Typography variant="h4" flexGrow={1}>
-            {t('title')}
+            Pacientes
           </Typography>
           <Button
             variant="contained"
