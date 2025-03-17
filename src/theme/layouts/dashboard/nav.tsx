@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { varAlpha } from '#/_error/theme/styles';
 
 import type { Theme, SxProps, Breakpoint } from '@mui/material/styles';
 
@@ -8,6 +7,8 @@ import ListItem from '@mui/material/ListItem';
 import { useTheme } from '@mui/material/styles';
 import ListItemButton from '@mui/material/ListItemButton';
 import Drawer, { drawerClasses } from '@mui/material/Drawer';
+
+import { varAlpha } from '#/utils/styles';
 
 import { Logo } from 'src/components/logo';
 import { usePathname } from 'src/hooks/use-pathname';

@@ -1,5 +1,4 @@
 import { useState, useCallback } from 'react';
-import { bgBlur } from '#/_error/theme/styles';
 
 import type { BoxProps } from '@mui/material/Box';
 
@@ -11,6 +10,8 @@ import { useTheme } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import InputAdornment from '@mui/material/InputAdornment';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
+
+import { bgBlur } from '#/utils/mixins';
 
 import { Iconify } from 'src/components/iconify';
 

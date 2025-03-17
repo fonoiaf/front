@@ -1,5 +1,3 @@
-import { layoutClasses } from '#/_error/layouts/classes';
-
 import type { BoxProps } from '@mui/material/Box';
 import type { Breakpoint } from '@mui/material/styles';
 import type { ContainerProps } from '@mui/material/Container';
@@ -7,6 +5,8 @@ import type { ContainerProps } from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import { useTheme } from '@mui/material/styles';
 import Container from '@mui/material/Container';
+
+import { layoutClasses } from '#/theme/layouts/classes';
 
 // ----------------------------------------------------------------------
 

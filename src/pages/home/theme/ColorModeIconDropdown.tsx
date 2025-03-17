@@ -7,7 +7,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import IconButton from '@mui/material/IconButton';
 import DarkModeIcon from '@mui/icons-material/DarkModeRounded';
-import { useColorScheme, useTheme } from '@mui/material/styles';
+import { useTheme, useColorScheme } from '@mui/material/styles';
 import LightModeIcon from '@mui/icons-material/LightModeRounded';
 
 export default function ColorModeIconDropdown(props: IconButtonOwnProps) {

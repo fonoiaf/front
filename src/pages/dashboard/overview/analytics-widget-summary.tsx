@@ -1,6 +1,6 @@
 import type { CardProps } from '@mui/material/Card';
+import type { ColorType } from '#/theme/core/palette';
 import type { ChartOptions } from '#/components/chart';
-import type { ColorType } from '#/_error/theme/core/palette';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';

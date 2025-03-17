@@ -1,5 +1,3 @@
-import { textGradient } from '#/_error/theme/styles';
-
 import type { StackProps } from '@mui/material/Stack';
 
 import Box from '@mui/material/Box';
@@ -7,6 +5,7 @@ import Button from '@mui/material/Button';
 import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 
+import { textGradient } from '#/utils/mixins';
 // ----------------------------------------------------------------------
 
 export function NavUpgrade({ sx, ...other }: StackProps) {
