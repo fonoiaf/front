@@ -1,6 +1,6 @@
 import type { Theme, CssVarsThemeOptions } from '@mui/material/styles';
 
-import { extendTheme, createTheme as createThemeMui } from '@mui/material/styles';
+import { extendTheme } from '@mui/material/styles';
 
 import shadows from './shadows';
 import customShape from './shape';
