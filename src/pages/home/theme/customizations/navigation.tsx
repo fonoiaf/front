@@ -1,11 +1,11 @@
-import { alpha } from '@mui6/material/styles';
-import { tabClasses } from '@mui6/material/Tab';
-import { selectClasses } from '@mui6/material/Select';
-import { dividerClasses } from '@mui6/material/Divider';
-import { menuItemClasses } from '@mui6/material/MenuItem';
-import { buttonBaseClasses } from '@mui6/material/ButtonBase';
+import type { Theme, Components } from '@mui/material/styles';
 
-import type { Theme, Components } from '@mui6/material/styles';
+import { alpha } from '@mui/material/styles';
+import { tabClasses } from '@mui/material/Tab';
+import { selectClasses } from '@mui/material/Select';
+import { dividerClasses } from '@mui/material/Divider';
+import { menuItemClasses } from '@mui/material/MenuItem';
+import { buttonBaseClasses } from '@mui/material/ButtonBase';
 
 import { gray, brand } from '../themePrimitives';
 

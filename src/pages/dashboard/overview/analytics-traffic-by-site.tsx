@@ -2,11 +2,14 @@ import type { CardProps } from '@mui/material/Card';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
+import { useTheme } from '@mui/material/styles';
 import CardHeader from '@mui/material/CardHeader';
 import Typography from '@mui/material/Typography';
 
-import { varAlpha } from 'src/theme/styles';
-import { Iconify } from 'src/components/iconify';
+import { varAlpha } from '#/utils/styles';
+
+import { Iconify } from '#/components/iconify';
+
 import { fShortenNumber } from 'src/utils/format-number';
 
 // ----------------------------------------------------------------------
@@ -18,6 +21,8 @@ type Props = CardProps & {
 };
 
 export function AnalyticsTrafficBySite({ title, subheader, list, sx, ...other }: Props) {
+  const theme = useTheme();
+
   return (
     <Card sx={sx} {...other}>
       <CardHeader title={title} subheader={subheader} />
@@ -26,15 +31,16 @@ export function AnalyticsTrafficBySite({ title, subheader, list, sx, ...other }:
         {list.map((site) => (
           <Box
             key={site.label}
-            sx={(theme) => ({
+            sx={{
               py: 2.5,
               display: 'flex',
               borderRadius: 1.5,
               textAlign: 'center',
               alignItems: 'center',
               flexDirection: 'column',
-              border: `solid 1px ${varAlpha(theme.vars.palette.grey['500Channel'], 0.12)}`,
-            })}
+              // border: `solid 1px ${varAlpha((theme.vars || theme).palette.grey['500'], 0.12)}`,
+              border: `solid 1px ${varAlpha((theme.vars || theme).palette.grey['500Channel'], 0.12)}`,
+            }}
           >
             {site.value === 'facebook' && (
               <Iconify icon="eva:facebook-fill" color="#1877F2" width={32} />

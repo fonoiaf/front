@@ -6,11 +6,11 @@ import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import { visuallyHidden } from '@mui/utils';
-import { styled } from '@mui/material/styles';
 import Container from '@mui/material/Container';
 import TextField from '@mui/material/TextField';
 import InputLabel from '@mui/material/InputLabel';
 import Typography from '@mui/material/Typography';
+import { styled, useTheme } from '@mui/material/styles';
 
 const StyledBox = styled('div')(({ theme }) => ({
   alignSelf: 'center',
@@ -38,12 +38,13 @@ const StyledBox = styled('div')(({ theme }) => ({
 }));
 
 export default function Hero() {
+  const theme = useTheme();
   const { t } = useTranslation('home');
 
   return (
     <Box
       id="hero"
-      sx={(theme) => ({
+      sx={{
         width: '100%',
         backgroundRepeat: 'no-repeat',
 
@@ -53,7 +54,7 @@ export default function Hero() {
           backgroundImage:
             'radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 16%), transparent)',
         }),
-      })}
+      }}
     >
       <Container
         sx={{
@@ -82,13 +83,13 @@ export default function Hero() {
             <Typography
               component="span"
               variant="h1"
-              sx={(theme) => ({
+              sx={{
                 fontSize: 'inherit',
                 color: 'primary.main',
                 ...theme.applyStyles('dark', {
                   color: 'primary.light',
                 }),
-              })}
+              }}
             >
               &nbsp;{t('hero.products')}
             </Typography>

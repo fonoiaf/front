@@ -9,7 +9,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import { useTheme } from '@mui/material/styles';
 
-import { bgBlur, varAlpha } from 'src/theme/styles';
+import { bgBlur } from '#/utils/mixins';
+import { varAlpha } from '#/utils/styles';
 
 import { layoutClasses } from '../classes';
 
@@ -41,7 +42,7 @@ export function HeaderSection({
 
   const toolbarStyles = {
     default: {
-      ...bgBlur({ color: varAlpha(theme.vars.palette.background.defaultChannel, 0.8) }),
+      ...bgBlur({ color: varAlpha((theme.vars || theme).palette.background.defaultChannel, 0.8) }),
       minHeight: 'auto',
       height: 'var(--layout-header-mobile-height)',
       transition: theme.transitions.create(['height', 'background-color'], {

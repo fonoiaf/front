@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
+import { useTheme } from '@mui/material';
 import Tooltip from '@mui/material/Tooltip';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -18,6 +19,7 @@ type UserTableToolbarProps = {
 };
 
 export function UserTableToolbar({ numSelected, filterName, onFilterName }: UserTableToolbarProps) {
+  const theme = useTheme();
   const { t } = useTranslation('phoneme');
 
   return (
@@ -26,7 +28,7 @@ export function UserTableToolbar({ numSelected, filterName, onFilterName }: User
         height: 96,
         display: 'flex',
         justifyContent: 'space-between',
-        p: (theme) => theme.spacing(0, 1, 0, 3),
+        p: theme.spacing(0, 1, 0, 3),
         ...(numSelected > 0 && {
           color: 'primary.main',
           bgcolor: 'primary.lighter',

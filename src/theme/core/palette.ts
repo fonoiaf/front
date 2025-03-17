@@ -1,7 +1,8 @@
 import type { ColorSystemOptions } from '@mui/material/styles';
 
+import { varAlpha, createPaletteChannel } from '#/utils/styles';
+
 import COLORS from './colors.json';
-import { varAlpha, createPaletteChannel } from '../styles';
 
 // ----------------------------------------------------------------------
 
@@ -56,28 +57,13 @@ export type ColorType = 'primary' | 'secondary' | 'info' | 'success' | 'warning'
 
 // ----------------------------------------------------------------------
 
-// Grey
 export const grey = createPaletteChannel(COLORS.grey);
-
-// Primary
 export const primary = createPaletteChannel(COLORS.primary);
-
-// Secondary
 export const secondary = createPaletteChannel(COLORS.secondary);
-
-// Info
 export const info = createPaletteChannel(COLORS.info);
-
-// Success
 export const success = createPaletteChannel(COLORS.success);
-
-// Warning
 export const warning = createPaletteChannel(COLORS.warning);
-
-// Error
 export const error = createPaletteChannel(COLORS.error);
-
-// Common
 export const common = createPaletteChannel(COLORS.common);
 
 // Text

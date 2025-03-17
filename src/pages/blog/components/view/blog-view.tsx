@@ -1,14 +1,15 @@
 import { useState, useCallback } from 'react';
 
 import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
-import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
 import Pagination from '@mui/material/Pagination';
 
+import { DashboardContent } from '#/theme/layouts/dashboard';
+
 import { _posts } from 'src/_mock';
 import { Iconify } from 'src/components/iconify';
-import { DashboardContent } from 'src/layouts/dashboard';
 
 import { PostItem } from '../post-item';
 import { PostSort } from '../post-sort';

@@ -5,9 +5,11 @@ import type { Theme, SxProps, Breakpoint } from '@mui/material/styles';
 import Link from '@mui/material/Link';
 import Alert from '@mui/material/Alert';
 
+import { stylesMode } from '#/utils/styles';
+
+import { RouterLink } from '#/components/router-link';
+
 import { Logo } from 'src/components/logo';
-import { stylesMode } from 'src/theme/styles';
-import { RouterLink } from 'src/components/router-link';
 
 import { Main } from './main';
 import { HeaderSection } from '../core/header-section';

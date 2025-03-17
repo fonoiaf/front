@@ -17,7 +17,7 @@ import Typography from '@mui/material/Typography';
 import TableContainer from '@mui/material/TableContainer';
 import TablePagination from '@mui/material/TablePagination';
 
-import { DashboardContent } from '#/layouts/dashboard';
+import { DashboardContent } from '#/theme/layouts/dashboard';
 
 import { useTable } from '#/hooks/use-table';
 
@@ -78,7 +78,8 @@ export default function PhonemePage() {
       .finally(() => {
         // always executed
       });
-  }, [filterName, phonemeService, table.order, table.orderBy]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filterName, table.order, table.orderBy]);
 
   // https://18.react.dev/reference/react/useEffect
   useEffect(() => {

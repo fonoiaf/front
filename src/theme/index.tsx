@@ -2,9 +2,9 @@ import type {} from '@mui/lab/themeAugmentation';
 import type {} from '@mui/material/themeCssVarsAugmentation';
 
 import CssBaseline from '@mui/material/CssBaseline';
-import { Experimental_CssVarsProvider as CssVarsProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
 
-import { createTheme } from './create-theme';
+import coreTheme from './core';
 
 // ----------------------------------------------------------------------
 
@@ -12,13 +12,13 @@ type Props = {
   children: React.ReactNode;
 };
 
-export function ThemeProvider({ children }: Props) {
-  const theme = createTheme();
+export default function CustomTheme({ children }: Props) {
+  const theme = coreTheme();
 
   return (
-    <CssVarsProvider theme={theme}>
+    <ThemeProvider theme={theme}>
       <CssBaseline />
       {children}
-    </CssVarsProvider>
+    </ThemeProvider>
   );
 }

@@ -5,10 +5,12 @@ import type { ButtonProps } from '@mui/material/Button';
 import Button from '@mui/material/Button';
 import Popover from '@mui/material/Popover';
 import MenuList from '@mui/material/MenuList';
+import { useTheme } from '@mui/material/styles';
 import MenuItem, { menuItemClasses } from '@mui/material/MenuItem';
 
-import { varAlpha } from 'src/theme/styles';
-import { Iconify } from 'src/components/iconify';
+import { varAlpha } from '#/utils/styles';
+
+import { Iconify } from '#/components/iconify';
 
 // ----------------------------------------------------------------------
 
@@ -19,6 +21,8 @@ type PostSortProps = ButtonProps & {
 };
 
 export function PostSort({ options, sortBy, onSort, sx, ...other }: PostSortProps) {
+  const theme = useTheme();
+
   const [openPopover, setOpenPopover] = useState<HTMLButtonElement | null>(null);
 
   const handleOpenPopover = useCallback((event: React.MouseEvent<HTMLButtonElement>) => {
@@ -44,7 +48,8 @@ export function PostSort({ options, sortBy, onSort, sx, ...other }: PostSortProp
           />
         }
         sx={{
-          bgcolor: (theme) => varAlpha(theme.vars.palette.grey['500Channel'], 0.08),
+          // bgcolor: varAlpha((theme.vars || theme).palette.grey['500'], 0.08),
+          bgcolor: varAlpha((theme.vars || theme).palette.grey['500Channel'], 0.08),
           ...sx,
         }}
         {...other}

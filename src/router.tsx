@@ -1,17 +1,16 @@
 import { lazy, Suspense } from 'react';
 import { Outlet, Navigate, useRoutes } from 'react-router-dom';
 
-import Box from '@mui/material/Box';
-import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
+import { AuthLayout } from '#/theme/layouts/auth';
+import { DashboardLayout } from '#/theme/layouts/dashboard';
 
-import { varAlpha } from 'src/theme/styles';
-import { AuthLayout } from 'src/layouts/auth';
-import { DashboardLayout } from 'src/layouts/dashboard';
+import { Fallback } from '#/components/fallback';
 
 // ----------------------------------------------------------------------
 
 export const HomePage = lazy(() => import('src/pages/home'));
-export const MarketingPage = lazy(() => import('src/pages/home/MarketingPage'));
+export const MarketingPage = lazy(() => import('src/pages/home'));
+// export const MarketingPage = lazy(() => import('src/pages/home/MarketingPage'));
 export const BlogPage = lazy(() => import('src/pages/blog'));
 export const WordPage = lazy(() => import('src/pages/word'));
 export const UserPage = lazy(() => import('src/pages/user'));
@@ -25,20 +24,6 @@ export const ProductsPage = lazy(() => import('src/pages/products'));
 export const Page404 = lazy(() => import('src/pages/page-not-found'));
 
 // ----------------------------------------------------------------------
-
-const renderFallback = (
-  <Box display="flex" alignItems="center" justifyContent="center" flex="1 1 auto">
-    <LinearProgress
-      sx={{
-        width: 1,
-        maxWidth: 320,
-        bgcolor: (theme) => varAlpha(theme.vars.palette.text.primaryChannel, 0.16),
-        [`& .${linearProgressClasses.bar}`]: { bgcolor: 'text.primary' },
-      }}
-    />
-  </Box>
-);
-
 export function Router() {
   return useRoutes([
     // { element: <HomePage />, index: true },
@@ -46,7 +31,7 @@ export function Router() {
     {
       element: (
         <DashboardLayout>
-          <Suspense fallback={renderFallback}>
+          <Suspense fallback={<Fallback />}>
             <Outlet />
           </Suspense>
         </DashboardLayout>

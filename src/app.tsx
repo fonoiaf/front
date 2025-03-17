@@ -1,12 +1,12 @@
 import './global.css';
 
 import i18next from 'i18next';
+import ThemeProvider from '#/theme';
 import { I18nextProvider } from 'react-i18next';
 
 import Fab from '@mui/material/Fab';
 
 // TRANSLATIONS ---------------------------------------------------
-import { ThemeProvider } from '#/theme/theme-provider';
 
 import { useScrollToTop } from '#/hooks/use-scroll-to-top';
 

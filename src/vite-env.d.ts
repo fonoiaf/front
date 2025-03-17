@@ -35,4 +35,14 @@ interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
 
+// --------------------------------------------------------------------
+// ++++++++++++++++++++++++++ Custom ++++++++++++++++++++++++++++++++++
+// --------------------------------------------------------------------
+
+// declare module '@mui/material/styles' {
+//   interface ColorSchemeOverrides {
+//     custom?: true;
+//   }
+// }
+
 export {};

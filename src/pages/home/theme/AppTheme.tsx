@@ -1,13 +1,14 @@
 import * as React from 'react';
-import { createTheme, ThemeProvider } from '@mui6/material/styles';
 
-import type { ThemeOptions } from '@mui6/material/styles';
+import type { ThemeOptions } from '@mui/material/styles';
+
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import { inputsCustomizations } from './customizations/inputs';
 import { feedbackCustomizations } from './customizations/feedback';
 import { surfacesCustomizations } from './customizations/surfaces';
 import { navigationCustomizations } from './customizations/navigation';
-import { dataDisplayCustomizations } from './customizations/dataDisplay';
+import { dataDisplayCustomizations } from './customizations/components';
 import { shape, shadows, typography, colorSchemes } from './themePrimitives';
 
 interface AppThemeProps {
@@ -30,8 +31,17 @@ export default function AppTheme({ children, disableCustomTheme, themeComponents
               colorSchemeSelector: 'data-mui-color-scheme',
               cssVarPrefix: 'template',
             },
-            colorSchemes, // Recently added in v6 for building light & dark mode app, see https://mui.com/material-ui/customization/palette/#color-schemes
+            // colorSchemes,
+            // Recently added in v6 for building light & dark mode app, see https://mui.com/material-ui/customization/palette/#color-schemes
+            // typography,
+
+            // colorSchemes: {},
+            // typography: {},
+
+            colorSchemes,
             typography,
+            customShadows: {},
+
             shadows,
             shape,
             components: {

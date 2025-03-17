@@ -18,7 +18,7 @@ import Testimonials from './components/Testimonials';
 import LogoCollection from './components/LogoCollection';
 
 export default function Page() {
-  const defaultTheme = createTheme({ palette: { mode: 'light' } });
+  const defaultTheme = createTheme();
 
   return (
     <>

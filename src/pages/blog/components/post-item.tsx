@@ -3,14 +3,16 @@ import type { CardProps } from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Card from '@mui/material/Card';
+import { useTheme } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import Typography from '@mui/material/Typography';
 
-import { varAlpha } from 'src/theme/styles';
-import { fDate } from 'src/utils/format-time';
-import { Iconify } from 'src/components/iconify';
-import { SvgColor } from 'src/components/svg-color';
-import { fShortenNumber } from 'src/utils/format-number';
+import { varAlpha } from '#/utils/styles';
+import { fDate } from '#/utils/format-time';
+import { fShortenNumber } from '#/utils/format-number';
+
+import { Iconify } from '#/components/iconify';
+import { SvgColor } from '#/components/svg-color';
 
 // ----------------------------------------------------------------------
 
@@ -41,6 +43,8 @@ export function PostItem({
   latestPost: boolean;
   latestPostLarge: boolean;
 }) {
+  const theme = useTheme();
+
   const renderAvatar = (
     <Avatar
       alt={post.author.name}
@@ -162,7 +166,7 @@ export function PostItem({
   return (
     <Card sx={sx} {...other}>
       <Box
-        sx={(theme) => ({
+        sx={{
           position: 'relative',
           pt: 'calc(100% * 3 / 4)',
           ...((latestPostLarge || latestPost) && {
@@ -182,7 +186,7 @@ export function PostItem({
               sm: 'calc(100% * 3 / 4.66)',
             },
           }),
-        })}
+        }}
       >
         {renderShape}
         {renderAvatar}
@@ -190,14 +194,14 @@ export function PostItem({
       </Box>
 
       <Box
-        sx={(theme) => ({
+        sx={{
           p: theme.spacing(6, 3, 3, 3),
           ...((latestPostLarge || latestPost) && {
             width: 1,
             bottom: 0,
             position: 'absolute',
           }),
-        })}
+        }}
       >
         {renderDate}
         {renderTitle}

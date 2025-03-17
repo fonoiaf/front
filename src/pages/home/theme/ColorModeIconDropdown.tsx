@@ -1,50 +1,58 @@
 import * as React from 'react';
-import Menu from '@mui6/material/Menu';
-import MenuItem from '@mui6/material/MenuItem';
-import IconButton from '@mui6/material/IconButton';
-import { useColorScheme } from '@mui6/material/styles';
 
-import type { IconButtonOwnProps } from '@mui6/material/IconButton';
+import type { IconButtonOwnProps } from '@mui/material/IconButton';
 
 import Box from '@mui/material/Box';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import IconButton from '@mui/material/IconButton';
 import DarkModeIcon from '@mui/icons-material/DarkModeRounded';
+import { useTheme, useColorScheme } from '@mui/material/styles';
 import LightModeIcon from '@mui/icons-material/LightModeRounded';
 
 export default function ColorModeIconDropdown(props: IconButtonOwnProps) {
+  const theme = useTheme();
   const { mode, systemMode, setMode } = useColorScheme();
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
+
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
+
   const handleMode = (targetMode: 'system' | 'light' | 'dark') => () => {
     setMode(targetMode);
     handleClose();
   };
+
   if (!mode) {
     return (
       <Box
         data-screenshot="toggle-mode"
-        sx={(theme) => ({
+        sx={{
           verticalAlign: 'bottom',
           display: 'inline-flex',
           width: '2.25rem',
           height: '2.25rem',
-          borderRadius: (theme.vars || theme).shape.borderRadius,
+          borderRadius: ((theme.vars || theme) || theme).shape.borderRadius,
           border: '1px solid',
-          borderColor: (theme.vars || theme).palette.divider,
-        })}
+          borderColor: ((theme.vars || theme) || theme).palette.divider,
+        }}
       />
     );
   }
+
   const resolvedMode = (systemMode || mode) as 'light' | 'dark';
+
   const icon = {
     light: <LightModeIcon />,
     dark: <DarkModeIcon />,
   }[resolvedMode];
+
   return (
     <>
       <IconButton

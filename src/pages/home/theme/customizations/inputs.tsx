@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { alpha } from '@mui6/material/styles';
-import { svgIconClasses } from '@mui6/material/SvgIcon';
-import { toggleButtonClasses } from '@mui6/material/ToggleButton';
-import { outlinedInputClasses } from '@mui6/material/OutlinedInput';
-import { toggleButtonGroupClasses } from '@mui6/material/ToggleButtonGroup';
 
-import type { Theme, Components } from '@mui6/material/styles';
+import type { Theme, Components } from '@mui/material/styles';
 
+import { alpha } from '@mui/material/styles';
+import { svgIconClasses } from '@mui/material/SvgIcon';
 import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
+import { toggleButtonClasses } from '@mui/material/ToggleButton';
 import RemoveRoundedIcon from '@mui/icons-material/RemoveRounded';
+import { outlinedInputClasses } from '@mui/material/OutlinedInput';
+import { toggleButtonGroupClasses } from '@mui/material/ToggleButtonGroup';
 import CheckBoxOutlineBlankRoundedIcon from '@mui/icons-material/CheckBoxOutlineBlankRounded';
 
 import { gray, brand } from '../themePrimitives';

@@ -15,7 +15,7 @@ import Typography from '@mui/material/Typography';
 import TableContainer from '@mui/material/TableContainer';
 import TablePagination from '@mui/material/TablePagination';
 
-import { DashboardContent } from '#/layouts/dashboard';
+import { DashboardContent } from '#/theme/layouts/dashboard';
 
 import { useTable } from '#/hooks/use-table';
 

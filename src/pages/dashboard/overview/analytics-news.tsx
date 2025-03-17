@@ -4,6 +4,7 @@ import type { PostItemProps } from 'src/pages/blog/components/post-item';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
+import { useTheme } from '@mui/material';
 import Button from '@mui/material/Button';
 import Avatar from '@mui/material/Avatar';
 import CardHeader from '@mui/material/CardHeader';
@@ -51,6 +52,8 @@ export function AnalyticsNews({ title, subheader, list, ...other }: Props) {
 // ----------------------------------------------------------------------
 
 function PostItem({ sx, item, ...other }: BoxProps & { item: Props['list'][number] }) {
+  const theme = useTheme();
+
   return (
     <Box
       sx={{
@@ -59,7 +62,7 @@ function PostItem({ sx, item, ...other }: BoxProps & { item: Props['list'][numbe
         gap: 2,
         display: 'flex',
         alignItems: 'center',
-        borderBottom: (theme) => `dashed 1px ${theme.vars.palette.divider}`,
+        borderBottom: `dashed 1px ${(theme.vars || theme).palette.divider}`,
         ...sx,
       }}
       {...other}

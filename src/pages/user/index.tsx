@@ -11,13 +11,14 @@ import Typography from '@mui/material/Typography';
 import TableContainer from '@mui/material/TableContainer';
 import TablePagination from '@mui/material/TablePagination';
 
+import { DashboardContent } from '#/theme/layouts/dashboard';
+
 import { useTable } from '#/hooks/use-table';
 
 import { _users } from 'src/_mock';
 import { CONFIG } from 'src/config-global';
 import { Iconify } from 'src/components/iconify';
 import { Scrollbar } from 'src/components/scrollbar';
-import { DashboardContent } from 'src/layouts/dashboard';
 
 import { TableNoData } from './components/table-no-data';
 import { UserTableRow } from './components/user-table-row';

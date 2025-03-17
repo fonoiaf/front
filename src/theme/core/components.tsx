@@ -1,15 +1,45 @@
-import type { Theme, Components } from '@mui/material/styles';
+import type { Components } from '@mui/material/styles';
+import type { BaseTheme as BaseThemeDefault } from '@mui/material/styles/createThemeNoVars';
 
 import SvgIcon from '@mui/material/SvgIcon';
 
-import { varAlpha } from '../styles';
+import { varAlpha } from '#/utils/styles';
 
 // ----------------------------------------------------------------------
 
-const MuiBackdrop: Components<Theme>['MuiBackdrop'] = {
+interface CustomShadows {
+  z1?: string;
+  z4?: string;
+  z8?: string;
+  z12?: string;
+  z16?: string;
+  z20?: string;
+  z24?: string;
+  //
+  primary?: string;
+  secondary?: string;
+  info?: string;
+  success?: string;
+  warning?: string;
+  error?: string;
+  //
+  card?: string;
+  dialog?: string;
+  dropdown?: string;
+}
+
+declare module '@mui/material/styles/createThemeNoVars' {
+  interface BaseTheme {
+    customShadows: CustomShadows;
+  }
+}
+
+const MuiBackdrop: Components<BaseThemeDefault>['MuiBackdrop'] = {
   styleOverrides: {
     root: ({ theme }) => ({
-      backgroundColor: varAlpha(theme.vars.palette.grey['900Channel'], 0.8),
+      // backgroundColor: varAlpha(theme.palette.grey['900'], 0.8),
+      // backgroundColor: varAlpha((theme.vars || theme).palette.grey['900Channel'], 0.8),
+      backgroundColor: varAlpha(theme.palette.grey['900Channel'], 0.8),
     }),
     invisible: {
       background: 'transparent',
@@ -17,17 +47,17 @@ const MuiBackdrop: Components<Theme>['MuiBackdrop'] = {
   },
 };
 
-const MuiButton: Components<Theme>['MuiButton'] = {
+const MuiButton: Components<BaseThemeDefault>['MuiButton'] = {
   defaultProps: {
     disableElevation: true,
   },
   styleOverrides: {
     containedInherit: ({ theme }) => ({
-      color: theme.vars.palette.common.white,
-      backgroundColor: theme.vars.palette.grey[800],
+      color: theme.palette.common.white,
+      backgroundColor: theme.palette.grey[800],
       '&:hover': {
-        color: theme.vars.palette.common.white,
-        backgroundColor: theme.vars.palette.grey[800],
+        color: theme.palette.common.white,
+        backgroundColor: theme.palette.grey[800],
       },
     }),
     sizeLarge: {
@@ -36,7 +66,7 @@ const MuiButton: Components<Theme>['MuiButton'] = {
   },
 };
 
-const MuiCard: Components<Theme>['MuiCard'] = {
+const MuiCard: Components<BaseThemeDefault>['MuiCard'] = {
   styleOverrides: {
     root: ({ theme }) => ({
       zIndex: 0,
@@ -47,7 +77,7 @@ const MuiCard: Components<Theme>['MuiCard'] = {
   },
 };
 
-const MuiCardHeader: Components<Theme>['MuiCardHeader'] = {
+const MuiCardHeader: Components<BaseThemeDefault>['MuiCardHeader'] = {
   defaultProps: {
     titleTypographyProps: { variant: 'h6' },
     subheaderTypographyProps: { variant: 'body2' },
@@ -59,38 +89,42 @@ const MuiCardHeader: Components<Theme>['MuiCardHeader'] = {
   },
 };
 
-const MuiOutlinedInput: Components<Theme>['MuiOutlinedInput'] = {
+const MuiOutlinedInput: Components<BaseThemeDefault>['MuiOutlinedInput'] = {
   styleOverrides: {
     notchedOutline: ({ theme }) => ({
-      borderColor: varAlpha(theme.vars.palette.grey['500Channel'], 0.2),
+      // borderColor: varAlpha(theme.palette.grey['500'], 0.2),
+      // borderColor: varAlpha((theme.vars || theme).palette.grey['500Channel'], 0.2),
+      borderColor: varAlpha(theme.palette.grey['500Channel'], 0.2),
     }),
   },
 };
 
-const MuiPaper: Components<Theme>['MuiPaper'] = {
+const MuiPaper: Components<BaseThemeDefault>['MuiPaper'] = {
   defaultProps: {
     elevation: 0,
   },
   styleOverrides: {
     root: { backgroundImage: 'none' },
     outlined: ({ theme }) => ({
-      borderColor: varAlpha(theme.vars.palette.grey['500Channel'], 0.16),
+      // borderColor: varAlpha(theme.palette.grey['500'], 0.16),
+      // borderColor: varAlpha((theme.vars || theme).palette.grey['500Channel'], 0.16),
+      borderColor: varAlpha(theme.palette.grey['500Channel'], 0.16),
     }),
   },
 };
 
-const MuiTableCell: Components<Theme>['MuiTableCell'] = {
+const MuiTableCell: Components<BaseThemeDefault>['MuiTableCell'] = {
   styleOverrides: {
     head: ({ theme }) => ({
       fontSize: theme.typography.pxToRem(14),
-      color: theme.vars.palette.text.secondary,
+      color: theme.palette.text.secondary,
       fontWeight: theme.typography.fontWeightSemiBold,
-      backgroundColor: theme.vars.palette.background.neutral,
+      backgroundColor: theme.palette.background.neutral,
     }),
   },
 };
 
-const MuiMenuItem: Components<Theme>['MuiMenuItem'] = {
+const MuiMenuItem: Components<BaseThemeDefault>['MuiMenuItem'] = {
   styleOverrides: {
     root: ({ theme }) => ({
       ...theme.typography.body2,
@@ -98,11 +132,11 @@ const MuiMenuItem: Components<Theme>['MuiMenuItem'] = {
   },
 };
 
-const MuiLink: Components<Theme>['MuiLink'] = {
+const MuiLink: Components<BaseThemeDefault>['MuiLink'] = {
   defaultProps: { underline: 'hover' },
 };
 
-const MuiFormControlLabel: Components<Theme>['MuiFormControlLabel'] = {
+const MuiFormControlLabel: Components<BaseThemeDefault>['MuiFormControlLabel'] = {
   styleOverrides: {
     label: ({ theme }) => ({
       ...theme.typography.body2,
@@ -110,7 +144,7 @@ const MuiFormControlLabel: Components<Theme>['MuiFormControlLabel'] = {
   },
 };
 
-const MuiCheckbox: Components<Theme>['MuiCheckbox'] = {
+const MuiCheckbox: Components<BaseThemeDefault>['MuiCheckbox'] = {
   defaultProps: {
     size: 'small',
     icon: (
@@ -131,7 +165,7 @@ const MuiCheckbox: Components<Theme>['MuiCheckbox'] = {
   },
 };
 
-const MuiRadio: Components<Theme>['MuiRadio'] = {
+const MuiRadio: Components<BaseThemeDefault>['MuiRadio'] = {
   defaultProps: {
     size: 'small',
     icon: (
@@ -157,17 +191,19 @@ const MuiRadio: Components<Theme>['MuiRadio'] = {
 
 // ----------------------------------------------------------------------
 
-export const components = {
-  MuiCard,
-  MuiLink,
-  MuiPaper,
-  MuiRadio,
-  MuiButton,
-  MuiBackdrop,
-  MuiMenuItem,
-  MuiCheckbox,
-  MuiTableCell,
-  MuiCardHeader,
-  MuiOutlinedInput,
-  MuiFormControlLabel,
-};
+export default function customComponents(): Components<BaseThemeDefault> {
+  return {
+    MuiCard,
+    MuiLink,
+    MuiPaper,
+    MuiRadio,
+    MuiButton,
+    MuiBackdrop,
+    MuiMenuItem,
+    MuiCheckbox,
+    MuiTableCell,
+    MuiCardHeader,
+    MuiOutlinedInput,
+    MuiFormControlLabel,
+  };
+}

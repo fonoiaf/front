@@ -3,10 +3,9 @@ import { useTranslation } from 'react-i18next';
 
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
-// import Grid from '@mui/material/Grid';
 import { useTheme } from '@mui/system';
+import Grid2 from '@mui/material/Grid2';
 import Avatar from '@mui/material/Avatar';
-import Grid from '@mui/material/Unstable_Grid2';
 import Container from '@mui/material/Container';
 import CardHeader from '@mui/material/CardHeader';
 import Typography from '@mui/material/Typography';
@@ -111,10 +110,11 @@ export default function Testimonials() {
           {t('testimonials.description')}
         </Typography>
       </Box>
-      <Grid container spacing={2}>
+      <Grid2 container spacing={2}>
+        {/* <Grid container spacing={2}> */}
         {userTestimonials.map((testimonial, index) => (
-          // <Grid size={{ xs: 12, sm: 6, md: 4 }} key={index} sx={{ display: 'flex' }}>
-          <Grid xs={12} sm={6} md={4} key={index} sx={{ display: 'flex' }}>
+          <Grid2 size={{ xs: 12, sm: 6, md: 4 }} key={index} sx={{ display: 'flex' }}>
+            {/* <Grid xs={12} sm={6} md={4} key={index} sx={{ display: 'flex' }}> */}
             <Card
               variant="outlined"
               sx={{
@@ -144,9 +144,11 @@ export default function Testimonials() {
                 <img src={logos[index]} alt={`Logo ${index + 1}`} style={logoStyle} />
               </Box>
             </Card>
-          </Grid>
+          </Grid2>
+          // </Grid>
         ))}
-      </Grid>
+      </Grid2>
+      {/* </Grid> */}
     </Container>
   );
 }

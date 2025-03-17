@@ -8,6 +8,7 @@ import Avatar from '@mui/material/Avatar';
 import Popover from '@mui/material/Popover';
 import Divider from '@mui/material/Divider';
 import MenuList from '@mui/material/MenuList';
+import { useTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
 import MenuItem, { menuItemClasses } from '@mui/material/MenuItem';
@@ -28,8 +29,8 @@ export type AccountPopoverProps = IconButtonProps & {
 };
 
 export function AccountPopover({ data = [], sx, ...other }: AccountPopoverProps) {
+  const theme = useTheme();
   const router = useRouter();
-
   const pathname = usePathname();
 
   const [openPopover, setOpenPopover] = useState<HTMLButtonElement | null>(null);
@@ -58,8 +59,7 @@ export function AccountPopover({ data = [], sx, ...other }: AccountPopoverProps)
           p: '2px',
           width: 40,
           height: 40,
-          background: (theme) =>
-            `conic-gradient(${theme.vars.palette.primary.light}, ${theme.vars.palette.warning.light}, ${theme.vars.palette.primary.light})`,
+          background: `conic-gradient(${(theme.vars || theme).palette.primary.light}, ${(theme.vars || theme).palette.warning.light}, ${(theme.vars || theme).palette.primary.light})`,
           ...sx,
         }}
         {...other}

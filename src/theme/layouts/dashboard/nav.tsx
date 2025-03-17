@@ -8,8 +8,9 @@ import { useTheme } from '@mui/material/styles';
 import ListItemButton from '@mui/material/ListItemButton';
 import Drawer, { drawerClasses } from '@mui/material/Drawer';
 
+import { varAlpha } from '#/utils/styles';
+
 import { Logo } from 'src/components/logo';
-import { varAlpha } from 'src/theme/styles';
 import { usePathname } from 'src/hooks/use-pathname';
 import { Scrollbar } from 'src/components/scrollbar';
 import { RouterLink } from 'src/components/router-link';
@@ -44,6 +45,9 @@ export function NavDesktop({
 }: NavContentProps & { layoutQuery: Breakpoint }) {
   const theme = useTheme();
 
+  console.log('THEME');
+  console.log(theme);
+
   return (
     <Box
       sx={{
@@ -58,7 +62,8 @@ export function NavDesktop({
         bgcolor: 'var(--layout-nav-bg)',
         zIndex: 'var(--layout-nav-zIndex)',
         width: 'var(--layout-nav-vertical-width)',
-        borderRight: `1px solid var(--layout-nav-border-color, ${varAlpha(theme.vars.palette.grey['500Channel'], 0.12)})`,
+        borderRight: `1px solid var(--layout-nav-border-color, ${varAlpha((theme.vars || theme).palette.grey['500Channel'], 0.12)})`,
+        // borderRight: `1px solid var(--layout-nav-border-color, ${varAlpha((theme.vars || theme).palette.grey['500'], 0.12)})`,
         [theme.breakpoints.up(layoutQuery)]: {
           display: 'flex',
         },
