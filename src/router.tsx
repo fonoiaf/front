@@ -9,7 +9,8 @@ import { Fallback } from '#/components/fallback';
 // ----------------------------------------------------------------------
 
 export const HomePage = lazy(() => import('src/pages/home'));
-export const MarketingPage = lazy(() => import('src/pages/home/MarketingPage'));
+export const MarketingPage = lazy(() => import('src/pages/home'));
+// export const MarketingPage = lazy(() => import('src/pages/home/MarketingPage'));
 export const BlogPage = lazy(() => import('src/pages/blog'));
 export const WordPage = lazy(() => import('src/pages/word'));
 export const UserPage = lazy(() => import('src/pages/user'));
