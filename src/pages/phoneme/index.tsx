@@ -78,7 +78,7 @@ export default function PhonemePage() {
       .finally(() => {
         // always executed
       });
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filterName, table.order, table.orderBy]);
 
   // https://18.react.dev/reference/react/useEffect

@@ -245,12 +245,15 @@ export const getDesignTokens = (mode: PaletteMode) => {
   };
 };
 
-console.log('DEFAULT', createTheme());
-
-export type ColorSchema2 = Partial<Record<DefaultColorScheme, boolean | ColorSystemOptions>> &
+// export type ColorSchema2 = Partial<Record<DefaultColorScheme, boolean | ColorSystemOptions>> &
+export type CustomColors = Partial<Record<DefaultColorScheme, boolean | ColorSystemOptions>> &
   (ExtendedColorScheme extends string ? Record<ExtendedColorScheme, ColorSystemOptions> : {});
 
-export const colorSchemes: ColorSchema2 = {
+// interface CustomColors extends Pick<CssVarsThemeOptions, 'colorSchemes'> {}
+// interface CustomColors extends Pick<CssVarsThemeOptions, 'defaultColorScheme' | 'colorSchemes'> {}
+
+// export const colorSchemes: CustomColors = {
+export const colorSchemes = {
   light: {
     palette: {
       primary: {
@@ -365,10 +368,66 @@ export const colorSchemes: ColorSchema2 = {
       // 'hsla(220, 30%, 5%, 0.7) 0px 4px 16px 0px, hsla(220, 25%, 10%, 0.8) 0px 8px 16px -5px',
     },
   },
+  custom: {
+    palette: {
+      primary: {
+        ...defaultTheme.colorSchemes?.dark?.palette?.success,
+        contrastText: brand[50],
+        light: brand[300],
+        main: brand[400],
+        dark: brand[700],
+      },
+      info: {
+        ...defaultTheme.colorSchemes?.dark?.palette?.info,
+        contrastText: brand[300],
+        light: brand[500],
+        main: brand[700],
+        dark: brand[900],
+      },
+      warning: {
+        ...defaultTheme.colorSchemes?.dark?.palette?.warning,
+        light: orange[400],
+        main: orange[500],
+        dark: orange[700],
+      },
+      error: {
+        ...defaultTheme.colorSchemes?.dark?.palette?.error,
+        light: red[400],
+        main: red[500],
+        dark: red[700],
+      },
+      success: {
+        ...defaultTheme.colorSchemes?.dark?.palette?.success,
+        light: green[400],
+        main: green[500],
+        dark: green[700],
+      },
+      grey: {
+        ...gray,
+      },
+      divider: alpha(gray[700], 0.6),
+      background: {
+        default: gray[900],
+        paper: 'hsl(220, 30%, 7%)',
+      },
+      text: {
+        primary: 'hsl(0, 0%, 100%)',
+        secondary: gray[400],
+      },
+      action: {
+        hover: alpha(gray[600], 0.2),
+        selected: alpha(gray[600], 0.3),
+      },
+      // baseShadow:
+      // 'hsla(220, 30%, 5%, 0.7) 0px 4px 16px 0px, hsla(220, 25%, 10%, 0.8) 0px 8px 16px -5px',
+    },
+  },
 };
 
 export const typography = {
   fontFamily: ['"Inter", "sans-serif"'].join(','),
+  fontSecondaryFamily: ['"Inter", "sans-serif"'].join(','),
+  fontWeightSemiBold: '600',
   h1: {
     fontSize: defaultTheme.typography?.pxToRem(48),
     fontWeight: 600,

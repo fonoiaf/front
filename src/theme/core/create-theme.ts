@@ -1,36 +1,48 @@
-import type { Theme } from '@mui/material/styles';
+import type { Theme, CssVarsThemeOptions } from '@mui/material/styles';
 
 import { extendTheme } from '@mui/material/styles';
 
 import shadows from './shadows';
-import colorSchemes from './colors';
-import components from './components';
-import { typography } from './typography';
+import customShape from './shape';
+// import customColors from './colors';
+import customTypography from './typography';
+import customComponents from './components';
+import customColorsJson from './colors.json';
 import customShadows from './custom-shadows';
-// import { pallete } from './palette';
 
 // ----------------------------------------------------------------------
 
 export default function createTheme(): Theme {
-  const initialTheme: any = {
-    colorSchemes,
-    shadows: shadows(),
-    customShadows: customShadows(),
-    shape: { borderRadius: 8 },
-    components,
-    typography,
+  // const initialTheme: CssVarsThemeOptions = {
+  // const initialTheme = {
+  const initialTheme: CssVarsThemeOptions = {
     cssVarPrefix: '',
-    shouldSkipGeneratingVar,
+    shadows: shadows(),
+    shape: customShape(),
+    colorSchemes: {
+      ...customColorsJson,
+      custom: {
+        palette: {},
+        opacity: {},
+        overlays: undefined,
+      },
+    },
+    // colorSchemes: customColors(),
+    typography: customTypography(),
+    components: customComponents(),
+    customShadows: customShadows(),
+    shouldSkipGeneratingVar: customShouldSkipGeneratingVar,
   };
 
   const theme = extendTheme(initialTheme);
+  // const theme = createThemeMui(initialTheme);
 
   return theme;
 }
 
 // ----------------------------------------------------------------------
 
-function shouldSkipGeneratingVar(keys: string[], value: string | number): boolean {
+function customShouldSkipGeneratingVar(keys: string[], value: string | number): boolean {
   const skipGlobalKeys = [
     'mixins',
     'overlays',
