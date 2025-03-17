@@ -38,6 +38,9 @@ export default function coreTheme(): Theme {
       //   overlays: undefined,
       // },
     },
+
+    defaultColorScheme: 'light',
+
     // colorSchemes: customColors(),
     typography: customTypography(),
     components: customComponents(),
