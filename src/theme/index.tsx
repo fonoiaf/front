@@ -4,7 +4,7 @@ import type {} from '@mui/material/themeCssVarsAugmentation';
 import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 
-import createTheme from './core/create-theme';
+import coreTheme from './core';
 
 // ----------------------------------------------------------------------
 
@@ -13,7 +13,7 @@ type Props = {
 };
 
 export default function CustomTheme({ children }: Props) {
-  const theme = createTheme();
+  const theme = coreTheme();
 
   return (
     <ThemeProvider theme={theme}>

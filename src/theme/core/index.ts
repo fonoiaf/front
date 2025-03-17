@@ -12,7 +12,7 @@ import customShadows from './custom-shadows';
 
 // ----------------------------------------------------------------------
 
-export default function createTheme(): Theme {
+export default function coreTheme(): Theme {
   // const initialTheme: CssVarsThemeOptions = {
   // const initialTheme = {
   const initialTheme: CssVarsThemeOptions = {
