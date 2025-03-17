@@ -39,10 +39,10 @@ interface ImportMeta {
 // ++++++++++++++++++++++++++ Custom ++++++++++++++++++++++++++++++++++
 // --------------------------------------------------------------------
 
-declare module '@mui/material/styles' {
-  interface ColorSchemeOverrides {
-    custom?: true;
-  }
-}
+// declare module '@mui/material/styles' {
+//   interface ColorSchemeOverrides {
+//     custom?: true;
+//   }
+// }
 
 export {};

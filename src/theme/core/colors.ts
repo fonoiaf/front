@@ -1,6 +1,3 @@
-
-
-
 // import type {
 //   DefaultColorScheme,
 //   ExtendedColorScheme,
@@ -15,7 +12,7 @@
 // export default function customColors(): Pick<CssVarsThemeOptions, 'colorSchemes'> {
 export default function customColors() {
   // const theme = createTheme();
-  
+
   // const light = theme.colorSchemes;
   // const dark = theme.colorSchemes;
   // const primary = theme.colorSchemes.custom;

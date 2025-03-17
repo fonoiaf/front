@@ -1,6 +1,6 @@
 import type { Theme, CssVarsThemeOptions } from '@mui/material/styles';
 
-import { extendTheme } from '@mui/material/styles';
+import { extendTheme, createTheme as createThemeMui } from '@mui/material/styles';
 
 import shadows from './shadows';
 import customShape from './shape';
@@ -21,11 +21,11 @@ export default function createTheme(): Theme {
     shape: customShape(),
     colorSchemes: {
       ...customColorsJson,
-      custom: {
-        palette: {},
-        opacity: {},
-        overlays: undefined,
-      },
+      // custom: {
+      //   palette: {},
+      //   opacity: {},
+      //   overlays: undefined,
+      // },
     },
     // colorSchemes: customColors(),
     typography: customTypography(),
@@ -35,7 +35,6 @@ export default function createTheme(): Theme {
   };
 
   const theme = extendTheme(initialTheme);
-  // const theme = createThemeMui(initialTheme);
 
   return theme;
 }
